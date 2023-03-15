@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Hello Extensions of the World",
+  "description": "Base Level Extension",
+  "version": "0.0.1",
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_icon": "assets/hello_extensions.png"
+  },
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "persistAcrossSessions": false,
+      "runAt": "document_end",
+      "js": ["scripts/youtubeScript.js"]
+    }
+  ],
+  "permissions": ["activeTab", "scripting"]
+}
