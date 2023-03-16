@@ -1,4 +1,4 @@
-console.log("NETWORKLISTENSCRIPT.JS");
+console.log("networkListener");
 
 let _open = window.XMLHttpRequest.prototype.open,
   _send = window.XMLHttpRequest.prototype.send;
