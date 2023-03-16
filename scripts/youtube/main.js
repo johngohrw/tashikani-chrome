@@ -1,18 +1,4 @@
-import { debug, getFullPathString, isWatch, pathChecker } from "../utils.js";
-
-export const initialState = {
-  isWatchPage: isWatch(getFullPathString(window)),
-};
-
-let state = new Proxy(initialState, {
-  set(obj, prop, value) {
-    if (prop === "isWatchPage" && value) {
-      debug("isWatchPage", value);
-    }
-    // debug("state set handler", `prop: ${prop}, value: ${value}`);
-    return Reflect.set(...arguments);
-  },
-});
+import { debug, isWatch, pathChecker } from "../utils.js";
 
 const onPathChange = function (current, previous) {
   debug("onPathChange", current);
@@ -21,4 +7,4 @@ const onPathChange = function (current, previous) {
   }
 };
 
-let pathCheckInterval = pathChecker(window, onPathChange, 1000);
+const pathCheckInterval = pathChecker(window, onPathChange, 500);
