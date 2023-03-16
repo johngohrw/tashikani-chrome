@@ -1,4 +1,4 @@
-# youtube-caption-chrome-extension
+# Tashikani Chrome Web Extension
 
-a chrome extension for manipulating YouTube captions
+### Learn Japanese with YouTube captions
 
