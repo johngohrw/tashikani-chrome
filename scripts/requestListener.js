@@ -1,8 +1,6 @@
 import { timedTextInterception } from "./utils.js";
 
-console.log("> requestListener.js");
-
-function openInterceptor(url, regex, callback) {
+export function openInterceptor(url, regex, callback) {
   if (RegExp(regex).test(url)) {
     callback(url);
   }

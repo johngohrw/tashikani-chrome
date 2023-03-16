@@ -1,25 +1,23 @@
-console.log("> utils.js");
+import { IS_DEBUG } from "./globals.js";
 
-// util functions
+export function debug(callerContext, ...message) {
+  if (IS_DEBUG) console.log(`[${callerContext}]:`, ...message);
+}
 
 export const timedTextInterception = (url) => {
   console.log("interception:", url);
 };
 
-const debug = function (callerContext, ...message) {
-  if (IS_DEBUG) console.log(`[${callerContext}]`, ...message);
-};
-
-function getFullPathString(window) {
+export function getFullPathString(window) {
   const location = window.location;
   return `${location.pathname}${location.search}${location.hash}`;
 }
 
-const isWatch = function (urlString) {
+export function isWatch(urlString) {
   return /watch/g.test(urlString);
-};
+}
 
-const pathChecker = function (window, callback, checkInterval) {
+export function pathChecker(window, callback, checkInterval) {
   let previous = getFullPathString(window);
   let current = getFullPathString(window);
   return setInterval(() => {
@@ -30,10 +28,8 @@ const pathChecker = function (window, callback, checkInterval) {
       callback(current, previous);
     }
   }, checkInterval);
-};
+}
 
-const activate = function () {};
+export const activate = function () {};
 
 // global const declarations
-
-const IS_DEBUG = true;

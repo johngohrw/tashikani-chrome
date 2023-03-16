@@ -10,7 +10,7 @@
   "content_scripts": [
     {
       "matches": ["*://*.youtube.com/*"],
-      "js": ["scripts/youtube.js"],
+      "js": ["scripts/youtube/inject.js"],
       "run_at": "document_start"
     }
   ],
@@ -19,7 +19,8 @@
       "resources": [
         "scripts/requestListener.js",
         "scripts/utils.js",
-        "scripts/others.js"
+        "scripts/globals.js",
+        "scripts/youtube/main.js"
       ],
       "matches": ["*://*.youtube.com/*"]
     }
