@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Hello Extensions of the World",
-  "description": "Base Level Extension",
+  "name": "YouTube Caption Tools",
+  "description": "A nice description for YouTube Caption Tools",
   "version": "0.0.1",
   "action": {
     "default_popup": "popup/index.html",
@@ -21,7 +21,9 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "scripts/toInject.js"
+        "scripts/requestListener.js",
+        "scripts/utils.js",
+        "scripts/others.js"
       ],
       "matches": [
         "*://*.youtube.com/*"
