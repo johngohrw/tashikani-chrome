@@ -1,4 +1,4 @@
-# Tashikani Chrome Web Extension
+# Tashikani for Chrome
 
 ### Learn Japanese with YouTube captions
 
