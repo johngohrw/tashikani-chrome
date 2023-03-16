@@ -1,6 +1,6 @@
 console.log("youtubeScript.js loaded");
 
-// network request listener
+console.log("CHROME> ", chrome)
 
 
 // util functions
@@ -31,7 +31,7 @@ const pathChecker = function (window, callback, checkInterval) {
   }, checkInterval);
 };
 
-const activate = function () {};
+const activate = function () { };
 
 // global consts, declarations
 
@@ -42,23 +42,67 @@ const initialState = {
 
 // main running instance
 
-let state = new Proxy(initialState, {
-  set(obj, prop, value) {
-    // console.log("changed", obj, prop, value);
-    if (prop === "isWatchPage" && value) {
-      activate();
+
+function main() {
+  let state = new Proxy(initialState, {
+    set(obj, prop, value) {
+      // console.log("changed", obj, prop, value);
+      if (prop === "isWatchPage" && value) {
+        activate();
+      }
+      debug("state set handler", `prop: ${prop}, value: ${value}`);
+      return Reflect.set(...arguments);
+    },
+  });
+
+  console.log(">", state, state.isWatchPage);
+
+  const onPathChange = function (current, previous) {
+    if (state.isWatchPage !== isWatch(current)) {
+      state.isWatchPage = isWatch(current);
     }
-    debug("state set handler", `prop: ${prop}, value: ${value}`);
-    return Reflect.set(...arguments);
-  },
-});
+  };
 
-console.log(">", state, state.isWatchPage);
+  let pathCheckInterval = pathChecker(window, onPathChange, 1000);
 
-const onPathChange = function (current, previous) {
-  if (state.isWatchPage !== isWatch(current)) {
-    state.isWatchPage = isWatch(current);
+  console.log("window", window)
+
+  console.log("NETWORKLISTENSCRIPT.JS");
+
+  let _open = window.XMLHttpRequest.prototype.open,
+    _send = window.XMLHttpRequest.prototype.send;
+
+  function openReplacement(method, url, async, user, password) {
+    this._url = url;
+    console.log("url > ", url);
+    return _open.apply(this, arguments);
   }
-};
 
-let pathCheckInterval = pathChecker(window, onPathChange, 1000);
+  function sendReplacement(data) {
+    if (this.onreadystatechange) {
+      this._onreadystatechange = this.onreadystatechange;
+    }
+
+    console.log("Request sent");
+
+    this.onreadystatechange = onReadyStateChangeReplacement;
+    return _send.apply(this, arguments);
+  }
+
+  function onReadyStateChangeReplacement() {
+    console.log("Ready state changed to: ", this.readyState);
+
+    if (this._onreadystatechange) {
+      return this._onreadystatechange.apply(this, arguments);
+    }
+  }
+
+  window.XMLHttpRequest.prototype.open = openReplacement;
+  window.XMLHttpRequest.prototype.send = sendReplacement;
+
+  var request = new XMLHttpRequest();
+  request.open("GET", ".", true);
+  request.send();
+
+}
+main()

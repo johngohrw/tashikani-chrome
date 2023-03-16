@@ -1,25 +1,26 @@
 console.log("service worker: background.js is running!");
 
-function getTabId() { ... }
 
-chrome.scripting
-  .executeScript({
-    target: { tabId: getTabId() },
-    files: ["scripts/networkListenScript.js"],
-  })
-  .then(() => console.log("script injected"));
-
-function reddenPage() {
-  console.log("redden!");
-  document.body.style.backgroundColor = "red";
+async function getCurrentTab() {
+  let queryOptions = { active: true, lastFocusedWindow: true };
+  let [tab] = await chrome.tabs.query(queryOptions);
+  return tab;
 }
 
-chrome.action.onClicked.addListener((tab) => {
-  console.log("action.onclicked > tab:", tab);
-  if (!tab.url.includes("chrome://")) {
-    chrome.scripting.executeScript({
-      target: { tabId: tab.id },
-      function: reddenPage,
-    });
-  }
-});
+async function injectScript(tabId) {
+  console.log("inject!")
+  await chrome.scripting
+    .executeScript({
+      target: { tabId },
+      files: ["scripts/networkListenScript.js"],
+    })
+    .then(() => console.log("script injected"));
+}
+
+getCurrentTab().then((result) => {
+  console.log("result", result)
+  console.log("result.id", result.id)
+  if (result?.id) injectScript(result.id)
+})
+
+

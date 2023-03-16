@@ -7,16 +7,29 @@
     "default_popup": "popup/index.html",
     "default_icon": "assets/hello_extensions.png"
   },
-  "background": {
-    "service_worker": "scripts/background.js"
-  },
   "content_scripts": [
     {
-      "matches": ["*://*.youtube.com/*"],
-      "persistAcrossSessions": false,
-      "runAt": "document_idle",
-      "js": ["scripts/youtubeScript.js"]
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "scripts/youtube.js"
+      ],
+      "run_at": "document_start"
     }
   ],
-  "permissions": ["activeTab", "scripting"]
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "scripts/toInject.js"
+      ],
+      "matches": [
+        "*://*.youtube.com/*"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ]
 }
