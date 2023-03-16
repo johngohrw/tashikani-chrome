@@ -1,36 +1,37 @@
-console.log("requestListener.js");
+import { timedTextInterception } from "./utils.js";
 
-let _open = window.XMLHttpRequest.prototype.open,
-    _send = window.XMLHttpRequest.prototype.send;
+console.log("> requestListener.js");
 
-function openReplacement(method, url, async, user, password) {
-    this._url = url;
-    console.log("url > ", url);
-    return _open.apply(this, arguments);
+function openInterceptor(url, regex, callback) {
+  if (RegExp(regex).test(url)) {
+    callback(url);
+  }
 }
 
-function sendReplacement(data) {
-    if (this.onreadystatechange) {
-        this._onreadystatechange = this.onreadystatechange;
-    }
+let _open = window.XMLHttpRequest.prototype.open,
+  _send = window.XMLHttpRequest.prototype.send;
 
-    console.log("Request sent");
+function openReplacement(method, url, async, user, password) {
+  this._url = url;
+  openInterceptor(url, /timedtext/g, (url) => {
+    timedTextInterception(url);
+  });
+  return _open.apply(this, arguments);
+}
 
-    this.onreadystatechange = onReadyStateChangeReplacement;
-    return _send.apply(this, arguments);
+function sendReplacement(body) {
+  if (this.onreadystatechange) {
+    this._onreadystatechange = this.onreadystatechange;
+  }
+  this.onreadystatechange = onReadyStateChangeReplacement;
+  return _send.apply(this, arguments);
 }
 
 function onReadyStateChangeReplacement() {
-    console.log("Ready state changed to: ", this.readyState);
-
-    if (this._onreadystatechange) {
-        return this._onreadystatechange.apply(this, arguments);
-    }
+  if (this._onreadystatechange) {
+    return this._onreadystatechange.apply(this, arguments);
+  }
 }
 
 window.XMLHttpRequest.prototype.open = openReplacement;
 window.XMLHttpRequest.prototype.send = sendReplacement;
-
-var request = new XMLHttpRequest();
-request.open("GET", ".", true);
-request.send();

@@ -9,12 +9,8 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "*://*.youtube.com/*"
-      ],
-      "js": [
-        "scripts/youtube.js"
-      ],
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["scripts/youtube.js"],
       "run_at": "document_start"
     }
   ],
@@ -25,13 +21,8 @@
         "scripts/utils.js",
         "scripts/others.js"
       ],
-      "matches": [
-        "*://*.youtube.com/*"
-      ]
+      "matches": ["*://*.youtube.com/*"]
     }
   ],
-  "permissions": [
-    "activeTab",
-    "scripting"
-  ]
+  "permissions": ["activeTab", "scripting"]
 }
