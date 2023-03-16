@@ -14,7 +14,7 @@
     {
       "matches": ["*://*.youtube.com/*"],
       "persistAcrossSessions": false,
-      "runAt": "document_end",
+      "runAt": "document_idle",
       "js": ["scripts/youtubeScript.js"]
     }
   ],

@@ -1,34 +1,64 @@
 console.log("youtubeScript.js loaded");
 
-console.log(">", document);
+// network request listener
 
-const IS_DEBUG = true;
 
-const debug = function (...message) {
-  console.log(...message);
+// util functions
+
+const debug = function (callerContext, ...message) {
+  if (IS_DEBUG) console.log(`[${callerContext}]`, ...message);
+};
+
+function getFullPathString(window) {
+  const location = window.location;
+  return `${location.pathname}${location.search}${location.hash}`;
+}
+
+const isWatch = function (urlString) {
+  return /watch/g.test(urlString);
 };
 
 const pathChecker = function (window, callback, checkInterval) {
-  let location = window.location;
-  function getLocationString(location) {
-    return `${location.pathname}${location.search}${location.hash}`;
-  }
-  let previous = getLocationString(location);
-  let current = getLocationString(location);
+  let previous = getFullPathString(window);
+  let current = getFullPathString(window);
   return setInterval(() => {
-    if (getLocationString(location) !== current) {
+    if (getFullPathString(window) !== current) {
       previous = `${current}`;
-      current = getLocationString(location);
-      if (IS_DEBUG) debug(`pathChecker change > c: ${current} p: ${previous}`);
+      current = getFullPathString(window);
+      debug("pathChecker", `current: ${current}, prev: ${previous}`);
       callback(current, previous);
     }
   }, checkInterval);
 };
 
-let pathCheckInterval = pathChecker(
-  window,
-  (current, prev) => {
-    console.log("path has changed!", current, prev);
+const activate = function () {};
+
+// global consts, declarations
+
+const IS_DEBUG = true;
+const initialState = {
+  isWatchPage: isWatch(getFullPathString(window)),
+};
+
+// main running instance
+
+let state = new Proxy(initialState, {
+  set(obj, prop, value) {
+    // console.log("changed", obj, prop, value);
+    if (prop === "isWatchPage" && value) {
+      activate();
+    }
+    debug("state set handler", `prop: ${prop}, value: ${value}`);
+    return Reflect.set(...arguments);
   },
-  1000
-);
+});
+
+console.log(">", state, state.isWatchPage);
+
+const onPathChange = function (current, previous) {
+  if (state.isWatchPage !== isWatch(current)) {
+    state.isWatchPage = isWatch(current);
+  }
+};
+
+let pathCheckInterval = pathChecker(window, onPathChange, 1000);

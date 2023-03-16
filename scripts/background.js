@@ -1,5 +1,14 @@
 console.log("service worker: background.js is running!");
 
+function getTabId() { ... }
+
+chrome.scripting
+  .executeScript({
+    target: { tabId: getTabId() },
+    files: ["scripts/networkListenScript.js"],
+  })
+  .then(() => console.log("script injected"));
+
 function reddenPage() {
   console.log("redden!");
   document.body.style.backgroundColor = "red";
