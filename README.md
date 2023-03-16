@@ -1,6 +1,7 @@
 # Tashikani for Chrome
 
+![image](https://github.com/johngohrw/tashikani-chrome/blob/main/assets/tashikani_icon_256x256.png)
+
 ### Learn Japanese with YouTube captions
 
-
-![image](https://github.com/johngohrw/tashikani-chrome/blob/main/assets/tashikani_icon_512x512.png)
+This is a work in progress.
