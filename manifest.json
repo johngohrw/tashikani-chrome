@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Caption Tools",
-  "description": "A nice description for YouTube Caption Tools",
+  "name": "Tashikani",
+  "description": "Learn Japanese with YouTube captions",
   "version": "0.0.1",
   "action": {
     "default_popup": "popup/index.html",
-    "default_icon": "assets/hello_extensions.png"
+    "default_icon": "assets/tashikani_icon.png"
   },
   "content_scripts": [
     {
