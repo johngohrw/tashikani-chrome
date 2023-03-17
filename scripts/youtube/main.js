@@ -77,21 +77,15 @@ setTimeout(() => {
     subtree: true,
   };
 
-  console.log("start observing");
-  // Select the node that will be observed for mutations
   const targetNode = document.getElementById("ytp-caption-window-container");
-  console.log(">", targetNode);
-
   const observer = new MutationObserver((mutationList, observer) => {
-    // console.log("> ", mutationList);
     for (const mutation of mutationList) {
-      if (
-        Array.from(mutation.target.classList).includes("ytp-caption-segment")
-      ) {
+      const classList = Array.from(mutation.target.classList);
+      if (classList.includes("ytp-caption-segment")) {
         const captionEl = mutation.target;
-        // console.log("caption element!", captionEl);
-        // console.log(captionEl.innerText);
 
+        // Disconnect it temporarily while we make changes to the observed element.
+        // An infinite loop will occur otherwise.
         observer.disconnect();
 
         const colors = [
@@ -113,6 +107,7 @@ setTimeout(() => {
           captionEl.appendChild(el);
         });
 
+        // Re-observe the element.
         observer.observe(targetNode, observerConfig);
       }
     }
