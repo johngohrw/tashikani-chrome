@@ -1,4 +1,4 @@
-import { debug } from "./utils.js";
+import { debug } from "./index.js";
 
 // Request interceptor
 export function interceptRequests(matchers) {

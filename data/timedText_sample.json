@@ -1,0 +1,1908 @@
+{
+  "wireMagic": "pb3",
+  "pens": [{}],
+  "wsWinStyles": [{}],
+  "wpWinPositions": [{}],
+  "events": [
+    {
+      "tStartMs": 6458,
+      "dDurationMs": 11046,
+      "segs": [{ "utf8": "南無、喝啰怛那、哆啰夜耶" }]
+    },
+    {
+      "tStartMs": 17777,
+      "dDurationMs": 2393,
+      "segs": [{ "utf8": "南無、阿例耶" }]
+    },
+    {
+      "tStartMs": 20332,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "婆盧羯帝、爍缽啰耶" }]
+    },
+    {
+      "tStartMs": 23840,
+      "dDurationMs": 2787,
+      "segs": [{ "utf8": "菩提薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 26627,
+      "dDurationMs": 2918,
+      "segs": [{ "utf8": "摩訶薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 29545,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "摩訶、迦盧尼迦耶" }]
+    },
+    {
+      "tStartMs": 32905,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "唵，薩皤啰罰曳" }]
+    },
+    {
+      "tStartMs": 35270,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "數怛那怛寫" }]
+    },
+    {
+      "tStartMs": 37271,
+      "dDurationMs": 4327,
+      "segs": [{ "utf8": "南無、悉吉栗埵、伊蒙阿例耶" }]
+    },
+    {
+      "tStartMs": 41599,
+      "dDurationMs": 3737,
+      "segs": [{ "utf8": "婆盧吉帝、室佛啰楞馱婆" }]
+    },
+    {
+      "tStartMs": 45336,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "南無、那啰謹墀，醯利摩訶" }]
+    },
+    {
+      "tStartMs": 49434,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "皤哆沙咩，薩婆阿他" }]
+    },
+    {
+      "tStartMs": 52614,
+      "dDurationMs": 6031,
+      "segs": [{ "utf8": "豆輸朋，阿逝孕，薩婆薩哆那摩婆薩哆" }]
+    },
+    {
+      "tStartMs": 58645,
+      "dDurationMs": 2983,
+      "segs": [{ "utf8": "那摩婆伽，摩罰特豆" }]
+    },
+    {
+      "tStartMs": 61628,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "怛姪他．唵，阿婆盧醯" }]
+    },
+    {
+      "tStartMs": 64710,
+      "dDurationMs": 4032,
+      "segs": [{ "utf8": "盧迦帝．迦羅帝．夷醯唎" }]
+    },
+    {
+      "tStartMs": 68742,
+      "dDurationMs": 5205,
+      "segs": [{ "utf8": "摩訶菩提薩埵， 薩婆薩婆．摩囉摩囉" }]
+    },
+    {
+      "tStartMs": 74438,
+      "dDurationMs": 4564,
+      "segs": [{ "utf8": "摩醯摩醯唎馱孕．俱盧俱盧羯蒙" }]
+    },
+    {
+      "tStartMs": 79240,
+      "dDurationMs": 4760,
+      "segs": [{ "utf8": "度盧度盧罰闍耶帝． 摩訶罰闍耶帝" }]
+    },
+    {
+      "tStartMs": 84172,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "陀囉陀囉．地唎尼．室佛囉耶" }]
+    },
+    {
+      "tStartMs": 88445,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "遮囉遮囉．摩麼罰摩囉" }]
+    },
+    {
+      "tStartMs": 91625,
+      "dDurationMs": 6556,
+      "segs": [{ "utf8": "穆帝隸．伊醯伊醯．室那室那．阿囉參佛囉舍利" }]
+    },
+    {
+      "tStartMs": 98181,
+      "dDurationMs": 7408,
+      "segs": [{ "utf8": "罰沙罰參．佛囉舍耶．呼嚧呼嚧摩囉．呼嚧呼嚧醯利" }]
+    },
+    {
+      "tStartMs": 106131,
+      "dDurationMs": 4065,
+      "segs": [{ "utf8": "娑囉娑囉，悉唎悉唎． 蘇嚧蘇嚧" }]
+    },
+    {
+      "tStartMs": 110391,
+      "dDurationMs": 4163,
+      "segs": [{ "utf8": "菩提夜菩提夜．菩馱夜菩馱夜" }]
+    },
+    {
+      "tStartMs": 114554,
+      "dDurationMs": 6457,
+      "segs": [{ "utf8": "彌帝唎夜．那囉謹墀．地利瑟尼那．波夜摩那" }]
+    },
+    {
+      "tStartMs": 121230,
+      "dDurationMs": 4950,
+      "segs": [{ "utf8": "娑婆訶．悉陀夜．娑婆訶．摩訶悉陀夜" }]
+    },
+    {
+      "tStartMs": 126180,
+      "dDurationMs": 4982,
+      "segs": [{ "utf8": "娑婆訶．悉陀喻藝．室皤囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 131162,
+      "dDurationMs": 5507,
+      "segs": [{ "utf8": "那囉謹墀．娑婆訶．摩囉那囉．娑婆訶" }]
+    },
+    {
+      "tStartMs": 136670,
+      "dDurationMs": 3442,
+      "segs": [{ "utf8": "悉囉僧阿穆佉耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 140346,
+      "dDurationMs": 3901,
+      "segs": [{ "utf8": "娑婆摩訶阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 144569,
+      "dDurationMs": 3365,
+      "segs": [{ "utf8": "者吉囉阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 147934,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "波陀摩羯悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 151442,
+      "dDurationMs": 4196,
+      "segs": [{ "utf8": "那囉謹墀皤伽囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 155638,
+      "dDurationMs": 3573,
+      "segs": [{ "utf8": "摩婆利勝羯囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 159211,
+      "dDurationMs": 5409,
+      "segs": [{ "utf8": "南無喝囉怛那哆囉夜耶，南無阿唎耶" }]
+    },
+    {
+      "tStartMs": 164620,
+      "dDurationMs": 3868,
+      "segs": [{ "utf8": "婆嚧吉帝．爍皤囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 168488,
+      "dDurationMs": 11373,
+      "segs": [{ "utf8": "唵，悉殿都．漫多囉．跋陀耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 180090,
+      "dDurationMs": 10866,
+      "segs": [{ "utf8": "南無、喝啰怛那、哆啰夜耶" }]
+    },
+    {
+      "tStartMs": 191229,
+      "dDurationMs": 2393,
+      "segs": [{ "utf8": "南無、阿例耶" }]
+    },
+    {
+      "tStartMs": 193784,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "婆盧羯帝、爍缽啰耶" }]
+    },
+    {
+      "tStartMs": 197292,
+      "dDurationMs": 2787,
+      "segs": [{ "utf8": "菩提薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 200079,
+      "dDurationMs": 2918,
+      "segs": [{ "utf8": "摩訶薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 202997,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "摩訶、迦盧尼迦耶" }]
+    },
+    {
+      "tStartMs": 206357,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "唵，薩皤啰罰曳" }]
+    },
+    {
+      "tStartMs": 208722,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "數怛那怛寫" }]
+    },
+    {
+      "tStartMs": 210723,
+      "dDurationMs": 4327,
+      "segs": [{ "utf8": "南無、悉吉栗埵、伊蒙阿例耶" }]
+    },
+    {
+      "tStartMs": 215051,
+      "dDurationMs": 3737,
+      "segs": [{ "utf8": "婆盧吉帝、室佛啰楞馱婆" }]
+    },
+    {
+      "tStartMs": 218788,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "南無、那啰謹墀，醯利摩訶" }]
+    },
+    {
+      "tStartMs": 222886,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "皤哆沙咩，薩婆阿他" }]
+    },
+    {
+      "tStartMs": 226066,
+      "dDurationMs": 6031,
+      "segs": [{ "utf8": "豆輸朋，阿逝孕，薩婆薩哆那摩婆薩哆" }]
+    },
+    {
+      "tStartMs": 232097,
+      "dDurationMs": 2983,
+      "segs": [{ "utf8": "那摩婆伽，摩罰特豆" }]
+    },
+    {
+      "tStartMs": 235080,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "怛姪他．唵，阿婆盧醯" }]
+    },
+    {
+      "tStartMs": 238162,
+      "dDurationMs": 4032,
+      "segs": [{ "utf8": "盧迦帝．迦羅帝．夷醯唎" }]
+    },
+    {
+      "tStartMs": 242194,
+      "dDurationMs": 5205,
+      "segs": [{ "utf8": "摩訶菩提薩埵， 薩婆薩婆．摩囉摩囉" }]
+    },
+    {
+      "tStartMs": 247890,
+      "dDurationMs": 4564,
+      "segs": [{ "utf8": "摩醯摩醯唎馱孕．俱盧俱盧羯蒙" }]
+    },
+    {
+      "tStartMs": 252692,
+      "dDurationMs": 4760,
+      "segs": [{ "utf8": "度盧度盧罰闍耶帝． 摩訶罰闍耶帝" }]
+    },
+    {
+      "tStartMs": 257624,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "陀囉陀囉．地唎尼．室佛囉耶" }]
+    },
+    {
+      "tStartMs": 261897,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "遮囉遮囉．摩麼罰摩囉" }]
+    },
+    {
+      "tStartMs": 265077,
+      "dDurationMs": 6556,
+      "segs": [{ "utf8": "穆帝隸．伊醯伊醯．室那室那．阿囉參佛囉舍利" }]
+    },
+    {
+      "tStartMs": 271633,
+      "dDurationMs": 7408,
+      "segs": [{ "utf8": "罰沙罰參．佛囉舍耶．呼嚧呼嚧摩囉．呼嚧呼嚧醯利" }]
+    },
+    {
+      "tStartMs": 279583,
+      "dDurationMs": 4065,
+      "segs": [{ "utf8": "娑囉娑囉，悉唎悉唎． 蘇嚧蘇嚧" }]
+    },
+    {
+      "tStartMs": 283843,
+      "dDurationMs": 4163,
+      "segs": [{ "utf8": "菩提夜菩提夜．菩馱夜菩馱夜" }]
+    },
+    {
+      "tStartMs": 288006,
+      "dDurationMs": 6457,
+      "segs": [{ "utf8": "彌帝唎夜．那囉謹墀．地利瑟尼那．波夜摩那" }]
+    },
+    {
+      "tStartMs": 294682,
+      "dDurationMs": 4950,
+      "segs": [{ "utf8": "娑婆訶．悉陀夜．娑婆訶．摩訶悉陀夜" }]
+    },
+    {
+      "tStartMs": 299632,
+      "dDurationMs": 4982,
+      "segs": [{ "utf8": "娑婆訶．悉陀喻藝．室皤囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 304614,
+      "dDurationMs": 5507,
+      "segs": [{ "utf8": "那囉謹墀．娑婆訶．摩囉那囉．娑婆訶" }]
+    },
+    {
+      "tStartMs": 310122,
+      "dDurationMs": 3442,
+      "segs": [{ "utf8": "悉囉僧阿穆佉耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 313798,
+      "dDurationMs": 3901,
+      "segs": [{ "utf8": "娑婆摩訶阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 318021,
+      "dDurationMs": 3365,
+      "segs": [{ "utf8": "者吉囉阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 321386,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "波陀摩羯悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 324894,
+      "dDurationMs": 4196,
+      "segs": [{ "utf8": "那囉謹墀皤伽囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 329090,
+      "dDurationMs": 3573,
+      "segs": [{ "utf8": "摩婆利勝羯囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 332663,
+      "dDurationMs": 5409,
+      "segs": [{ "utf8": "南無喝囉怛那哆囉夜耶，南無阿唎耶" }]
+    },
+    {
+      "tStartMs": 338072,
+      "dDurationMs": 3868,
+      "segs": [{ "utf8": "婆嚧吉帝．爍皤囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 341940,
+      "dDurationMs": 11373,
+      "segs": [{ "utf8": "唵，悉殿都．漫多囉．跋陀耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 355090,
+      "dDurationMs": 10866,
+      "segs": [{ "utf8": "南無、喝啰怛那、哆啰夜耶" }]
+    },
+    {
+      "tStartMs": 366229,
+      "dDurationMs": 2393,
+      "segs": [{ "utf8": "南無、阿例耶" }]
+    },
+    {
+      "tStartMs": 368784,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "婆盧羯帝、爍缽啰耶" }]
+    },
+    {
+      "tStartMs": 372292,
+      "dDurationMs": 2787,
+      "segs": [{ "utf8": "菩提薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 375079,
+      "dDurationMs": 2918,
+      "segs": [{ "utf8": "摩訶薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 377997,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "摩訶、迦盧尼迦耶" }]
+    },
+    {
+      "tStartMs": 381357,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "唵，薩皤啰罰曳" }]
+    },
+    {
+      "tStartMs": 383722,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "數怛那怛寫" }]
+    },
+    {
+      "tStartMs": 385723,
+      "dDurationMs": 4327,
+      "segs": [{ "utf8": "南無、悉吉栗埵、伊蒙阿例耶" }]
+    },
+    {
+      "tStartMs": 390051,
+      "dDurationMs": 3737,
+      "segs": [{ "utf8": "婆盧吉帝、室佛啰楞馱婆" }]
+    },
+    {
+      "tStartMs": 393788,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "南無、那啰謹墀，醯利摩訶" }]
+    },
+    {
+      "tStartMs": 397886,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "皤哆沙咩，薩婆阿他" }]
+    },
+    {
+      "tStartMs": 401066,
+      "dDurationMs": 6031,
+      "segs": [{ "utf8": "豆輸朋，阿逝孕，薩婆薩哆那摩婆薩哆" }]
+    },
+    {
+      "tStartMs": 407097,
+      "dDurationMs": 2983,
+      "segs": [{ "utf8": "那摩婆伽，摩罰特豆" }]
+    },
+    {
+      "tStartMs": 410080,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "怛姪他．唵，阿婆盧醯" }]
+    },
+    {
+      "tStartMs": 413162,
+      "dDurationMs": 4032,
+      "segs": [{ "utf8": "盧迦帝．迦羅帝．夷醯唎" }]
+    },
+    {
+      "tStartMs": 417194,
+      "dDurationMs": 5205,
+      "segs": [{ "utf8": "摩訶菩提薩埵， 薩婆薩婆．摩囉摩囉" }]
+    },
+    {
+      "tStartMs": 422890,
+      "dDurationMs": 4564,
+      "segs": [{ "utf8": "摩醯摩醯唎馱孕．俱盧俱盧羯蒙" }]
+    },
+    {
+      "tStartMs": 427692,
+      "dDurationMs": 4760,
+      "segs": [{ "utf8": "度盧度盧罰闍耶帝． 摩訶罰闍耶帝" }]
+    },
+    {
+      "tStartMs": 432624,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "陀囉陀囉．地唎尼．室佛囉耶" }]
+    },
+    {
+      "tStartMs": 436897,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "遮囉遮囉．摩麼罰摩囉" }]
+    },
+    {
+      "tStartMs": 440077,
+      "dDurationMs": 6556,
+      "segs": [{ "utf8": "穆帝隸．伊醯伊醯．室那室那．阿囉參佛囉舍利" }]
+    },
+    {
+      "tStartMs": 446633,
+      "dDurationMs": 7408,
+      "segs": [{ "utf8": "罰沙罰參．佛囉舍耶．呼嚧呼嚧摩囉．呼嚧呼嚧醯利" }]
+    },
+    {
+      "tStartMs": 454583,
+      "dDurationMs": 4065,
+      "segs": [{ "utf8": "娑囉娑囉，悉唎悉唎． 蘇嚧蘇嚧" }]
+    },
+    {
+      "tStartMs": 458843,
+      "dDurationMs": 4163,
+      "segs": [{ "utf8": "菩提夜菩提夜．菩馱夜菩馱夜" }]
+    },
+    {
+      "tStartMs": 463006,
+      "dDurationMs": 6457,
+      "segs": [{ "utf8": "彌帝唎夜．那囉謹墀．地利瑟尼那．波夜摩那" }]
+    },
+    {
+      "tStartMs": 469682,
+      "dDurationMs": 4950,
+      "segs": [{ "utf8": "娑婆訶．悉陀夜．娑婆訶．摩訶悉陀夜" }]
+    },
+    {
+      "tStartMs": 474632,
+      "dDurationMs": 4982,
+      "segs": [{ "utf8": "娑婆訶．悉陀喻藝．室皤囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 479614,
+      "dDurationMs": 5507,
+      "segs": [{ "utf8": "那囉謹墀．娑婆訶．摩囉那囉．娑婆訶" }]
+    },
+    {
+      "tStartMs": 485122,
+      "dDurationMs": 3442,
+      "segs": [{ "utf8": "悉囉僧阿穆佉耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 488798,
+      "dDurationMs": 3901,
+      "segs": [{ "utf8": "娑婆摩訶阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 493021,
+      "dDurationMs": 3365,
+      "segs": [{ "utf8": "者吉囉阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 496386,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "波陀摩羯悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 499894,
+      "dDurationMs": 4196,
+      "segs": [{ "utf8": "那囉謹墀皤伽囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 504090,
+      "dDurationMs": 3573,
+      "segs": [{ "utf8": "摩婆利勝羯囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 507663,
+      "dDurationMs": 5409,
+      "segs": [{ "utf8": "南無喝囉怛那哆囉夜耶，南無阿唎耶" }]
+    },
+    {
+      "tStartMs": 513072,
+      "dDurationMs": 3868,
+      "segs": [{ "utf8": "婆嚧吉帝．爍皤囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 516940,
+      "dDurationMs": 11373,
+      "segs": [{ "utf8": "唵，悉殿都．漫多囉．跋陀耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 530090,
+      "dDurationMs": 10866,
+      "segs": [{ "utf8": "南無、喝啰怛那、哆啰夜耶" }]
+    },
+    {
+      "tStartMs": 541229,
+      "dDurationMs": 2393,
+      "segs": [{ "utf8": "南無、阿例耶" }]
+    },
+    {
+      "tStartMs": 543784,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "婆盧羯帝、爍缽啰耶" }]
+    },
+    {
+      "tStartMs": 547292,
+      "dDurationMs": 2787,
+      "segs": [{ "utf8": "菩提薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 550079,
+      "dDurationMs": 2918,
+      "segs": [{ "utf8": "摩訶薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 552997,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "摩訶、迦盧尼迦耶" }]
+    },
+    {
+      "tStartMs": 556357,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "唵，薩皤啰罰曳" }]
+    },
+    {
+      "tStartMs": 558722,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "數怛那怛寫" }]
+    },
+    {
+      "tStartMs": 560723,
+      "dDurationMs": 4327,
+      "segs": [{ "utf8": "南無、悉吉栗埵、伊蒙阿例耶" }]
+    },
+    {
+      "tStartMs": 565051,
+      "dDurationMs": 3737,
+      "segs": [{ "utf8": "婆盧吉帝、室佛啰楞馱婆" }]
+    },
+    {
+      "tStartMs": 568788,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "南無、那啰謹墀，醯利摩訶" }]
+    },
+    {
+      "tStartMs": 572886,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "皤哆沙咩，薩婆阿他" }]
+    },
+    {
+      "tStartMs": 576066,
+      "dDurationMs": 6031,
+      "segs": [{ "utf8": "豆輸朋，阿逝孕，薩婆薩哆那摩婆薩哆" }]
+    },
+    {
+      "tStartMs": 582097,
+      "dDurationMs": 2983,
+      "segs": [{ "utf8": "那摩婆伽，摩罰特豆" }]
+    },
+    {
+      "tStartMs": 585080,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "怛姪他．唵，阿婆盧醯" }]
+    },
+    {
+      "tStartMs": 588162,
+      "dDurationMs": 4032,
+      "segs": [{ "utf8": "盧迦帝．迦羅帝．夷醯唎" }]
+    },
+    {
+      "tStartMs": 592194,
+      "dDurationMs": 5205,
+      "segs": [{ "utf8": "摩訶菩提薩埵， 薩婆薩婆．摩囉摩囉" }]
+    },
+    {
+      "tStartMs": 597890,
+      "dDurationMs": 4564,
+      "segs": [{ "utf8": "摩醯摩醯唎馱孕．俱盧俱盧羯蒙" }]
+    },
+    {
+      "tStartMs": 602692,
+      "dDurationMs": 4760,
+      "segs": [{ "utf8": "度盧度盧罰闍耶帝． 摩訶罰闍耶帝" }]
+    },
+    {
+      "tStartMs": 607624,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "陀囉陀囉．地唎尼．室佛囉耶" }]
+    },
+    {
+      "tStartMs": 611897,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "遮囉遮囉．摩麼罰摩囉" }]
+    },
+    {
+      "tStartMs": 615077,
+      "dDurationMs": 6556,
+      "segs": [{ "utf8": "穆帝隸．伊醯伊醯．室那室那．阿囉參佛囉舍利" }]
+    },
+    {
+      "tStartMs": 621633,
+      "dDurationMs": 7408,
+      "segs": [{ "utf8": "罰沙罰參．佛囉舍耶．呼嚧呼嚧摩囉．呼嚧呼嚧醯利" }]
+    },
+    {
+      "tStartMs": 629583,
+      "dDurationMs": 4065,
+      "segs": [{ "utf8": "娑囉娑囉，悉唎悉唎． 蘇嚧蘇嚧" }]
+    },
+    {
+      "tStartMs": 633843,
+      "dDurationMs": 4163,
+      "segs": [{ "utf8": "菩提夜菩提夜．菩馱夜菩馱夜" }]
+    },
+    {
+      "tStartMs": 638006,
+      "dDurationMs": 6457,
+      "segs": [{ "utf8": "彌帝唎夜．那囉謹墀．地利瑟尼那．波夜摩那" }]
+    },
+    {
+      "tStartMs": 644682,
+      "dDurationMs": 4950,
+      "segs": [{ "utf8": "娑婆訶．悉陀夜．娑婆訶．摩訶悉陀夜" }]
+    },
+    {
+      "tStartMs": 649632,
+      "dDurationMs": 4982,
+      "segs": [{ "utf8": "娑婆訶．悉陀喻藝．室皤囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 654614,
+      "dDurationMs": 5507,
+      "segs": [{ "utf8": "那囉謹墀．娑婆訶．摩囉那囉．娑婆訶" }]
+    },
+    {
+      "tStartMs": 660122,
+      "dDurationMs": 3442,
+      "segs": [{ "utf8": "悉囉僧阿穆佉耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 663798,
+      "dDurationMs": 3901,
+      "segs": [{ "utf8": "娑婆摩訶阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 668021,
+      "dDurationMs": 3365,
+      "segs": [{ "utf8": "者吉囉阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 671386,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "波陀摩羯悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 674894,
+      "dDurationMs": 4196,
+      "segs": [{ "utf8": "那囉謹墀皤伽囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 679090,
+      "dDurationMs": 3573,
+      "segs": [{ "utf8": "摩婆利勝羯囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 682663,
+      "dDurationMs": 5409,
+      "segs": [{ "utf8": "南無喝囉怛那哆囉夜耶，南無阿唎耶" }]
+    },
+    {
+      "tStartMs": 688072,
+      "dDurationMs": 3868,
+      "segs": [{ "utf8": "婆嚧吉帝．爍皤囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 691940,
+      "dDurationMs": 11373,
+      "segs": [{ "utf8": "唵，悉殿都．漫多囉．跋陀耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 705090,
+      "dDurationMs": 10866,
+      "segs": [{ "utf8": "南無、喝啰怛那、哆啰夜耶" }]
+    },
+    {
+      "tStartMs": 716229,
+      "dDurationMs": 2393,
+      "segs": [{ "utf8": "南無、阿例耶" }]
+    },
+    {
+      "tStartMs": 718784,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "婆盧羯帝、爍缽啰耶" }]
+    },
+    {
+      "tStartMs": 722292,
+      "dDurationMs": 2787,
+      "segs": [{ "utf8": "菩提薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 725079,
+      "dDurationMs": 2918,
+      "segs": [{ "utf8": "摩訶薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 727997,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "摩訶、迦盧尼迦耶" }]
+    },
+    {
+      "tStartMs": 731357,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "唵，薩皤啰罰曳" }]
+    },
+    {
+      "tStartMs": 733722,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "數怛那怛寫" }]
+    },
+    {
+      "tStartMs": 735723,
+      "dDurationMs": 4327,
+      "segs": [{ "utf8": "南無、悉吉栗埵、伊蒙阿例耶" }]
+    },
+    {
+      "tStartMs": 740051,
+      "dDurationMs": 3737,
+      "segs": [{ "utf8": "婆盧吉帝、室佛啰楞馱婆" }]
+    },
+    {
+      "tStartMs": 743788,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "南無、那啰謹墀，醯利摩訶" }]
+    },
+    {
+      "tStartMs": 747886,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "皤哆沙咩，薩婆阿他" }]
+    },
+    {
+      "tStartMs": 751066,
+      "dDurationMs": 6031,
+      "segs": [{ "utf8": "豆輸朋，阿逝孕，薩婆薩哆那摩婆薩哆" }]
+    },
+    {
+      "tStartMs": 757097,
+      "dDurationMs": 2983,
+      "segs": [{ "utf8": "那摩婆伽，摩罰特豆" }]
+    },
+    {
+      "tStartMs": 760080,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "怛姪他．唵，阿婆盧醯" }]
+    },
+    {
+      "tStartMs": 763162,
+      "dDurationMs": 4032,
+      "segs": [{ "utf8": "盧迦帝．迦羅帝．夷醯唎" }]
+    },
+    {
+      "tStartMs": 767194,
+      "dDurationMs": 5205,
+      "segs": [{ "utf8": "摩訶菩提薩埵， 薩婆薩婆．摩囉摩囉" }]
+    },
+    {
+      "tStartMs": 772890,
+      "dDurationMs": 4564,
+      "segs": [{ "utf8": "摩醯摩醯唎馱孕．俱盧俱盧羯蒙" }]
+    },
+    {
+      "tStartMs": 777692,
+      "dDurationMs": 4760,
+      "segs": [{ "utf8": "度盧度盧罰闍耶帝． 摩訶罰闍耶帝" }]
+    },
+    {
+      "tStartMs": 782624,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "陀囉陀囉．地唎尼．室佛囉耶" }]
+    },
+    {
+      "tStartMs": 786897,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "遮囉遮囉．摩麼罰摩囉" }]
+    },
+    {
+      "tStartMs": 790077,
+      "dDurationMs": 6556,
+      "segs": [{ "utf8": "穆帝隸．伊醯伊醯．室那室那．阿囉參佛囉舍利" }]
+    },
+    {
+      "tStartMs": 796633,
+      "dDurationMs": 7408,
+      "segs": [{ "utf8": "罰沙罰參．佛囉舍耶．呼嚧呼嚧摩囉．呼嚧呼嚧醯利" }]
+    },
+    {
+      "tStartMs": 804583,
+      "dDurationMs": 4065,
+      "segs": [{ "utf8": "娑囉娑囉，悉唎悉唎． 蘇嚧蘇嚧" }]
+    },
+    {
+      "tStartMs": 808843,
+      "dDurationMs": 4163,
+      "segs": [{ "utf8": "菩提夜菩提夜．菩馱夜菩馱夜" }]
+    },
+    {
+      "tStartMs": 813006,
+      "dDurationMs": 6457,
+      "segs": [{ "utf8": "彌帝唎夜．那囉謹墀．地利瑟尼那．波夜摩那" }]
+    },
+    {
+      "tStartMs": 819682,
+      "dDurationMs": 4950,
+      "segs": [{ "utf8": "娑婆訶．悉陀夜．娑婆訶．摩訶悉陀夜" }]
+    },
+    {
+      "tStartMs": 824632,
+      "dDurationMs": 4982,
+      "segs": [{ "utf8": "娑婆訶．悉陀喻藝．室皤囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 829614,
+      "dDurationMs": 5507,
+      "segs": [{ "utf8": "那囉謹墀．娑婆訶．摩囉那囉．娑婆訶" }]
+    },
+    {
+      "tStartMs": 835122,
+      "dDurationMs": 3442,
+      "segs": [{ "utf8": "悉囉僧阿穆佉耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 838798,
+      "dDurationMs": 3901,
+      "segs": [{ "utf8": "娑婆摩訶阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 843021,
+      "dDurationMs": 3365,
+      "segs": [{ "utf8": "者吉囉阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 846386,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "波陀摩羯悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 849894,
+      "dDurationMs": 4196,
+      "segs": [{ "utf8": "那囉謹墀皤伽囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 854090,
+      "dDurationMs": 3573,
+      "segs": [{ "utf8": "摩婆利勝羯囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 857663,
+      "dDurationMs": 5409,
+      "segs": [{ "utf8": "南無喝囉怛那哆囉夜耶，南無阿唎耶" }]
+    },
+    {
+      "tStartMs": 863072,
+      "dDurationMs": 3868,
+      "segs": [{ "utf8": "婆嚧吉帝．爍皤囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 866940,
+      "dDurationMs": 11373,
+      "segs": [{ "utf8": "唵，悉殿都．漫多囉．跋陀耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 880090,
+      "dDurationMs": 10866,
+      "segs": [{ "utf8": "南無、喝啰怛那、哆啰夜耶" }]
+    },
+    {
+      "tStartMs": 891229,
+      "dDurationMs": 2393,
+      "segs": [{ "utf8": "南無、阿例耶" }]
+    },
+    {
+      "tStartMs": 893784,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "婆盧羯帝、爍缽啰耶" }]
+    },
+    {
+      "tStartMs": 897292,
+      "dDurationMs": 2787,
+      "segs": [{ "utf8": "菩提薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 900079,
+      "dDurationMs": 2918,
+      "segs": [{ "utf8": "摩訶薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 902997,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "摩訶、迦盧尼迦耶" }]
+    },
+    {
+      "tStartMs": 906357,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "唵，薩皤啰罰曳" }]
+    },
+    {
+      "tStartMs": 908722,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "數怛那怛寫" }]
+    },
+    {
+      "tStartMs": 910723,
+      "dDurationMs": 4327,
+      "segs": [{ "utf8": "南無、悉吉栗埵、伊蒙阿例耶" }]
+    },
+    {
+      "tStartMs": 915051,
+      "dDurationMs": 3737,
+      "segs": [{ "utf8": "婆盧吉帝、室佛啰楞馱婆" }]
+    },
+    {
+      "tStartMs": 918788,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "南無、那啰謹墀，醯利摩訶" }]
+    },
+    {
+      "tStartMs": 922886,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "皤哆沙咩，薩婆阿他" }]
+    },
+    {
+      "tStartMs": 926066,
+      "dDurationMs": 6031,
+      "segs": [{ "utf8": "豆輸朋，阿逝孕，薩婆薩哆那摩婆薩哆" }]
+    },
+    {
+      "tStartMs": 932097,
+      "dDurationMs": 2983,
+      "segs": [{ "utf8": "那摩婆伽，摩罰特豆" }]
+    },
+    {
+      "tStartMs": 935080,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "怛姪他．唵，阿婆盧醯" }]
+    },
+    {
+      "tStartMs": 938162,
+      "dDurationMs": 4032,
+      "segs": [{ "utf8": "盧迦帝．迦羅帝．夷醯唎" }]
+    },
+    {
+      "tStartMs": 942194,
+      "dDurationMs": 5205,
+      "segs": [{ "utf8": "摩訶菩提薩埵， 薩婆薩婆．摩囉摩囉" }]
+    },
+    {
+      "tStartMs": 947890,
+      "dDurationMs": 4564,
+      "segs": [{ "utf8": "摩醯摩醯唎馱孕．俱盧俱盧羯蒙" }]
+    },
+    {
+      "tStartMs": 952692,
+      "dDurationMs": 4760,
+      "segs": [{ "utf8": "度盧度盧罰闍耶帝． 摩訶罰闍耶帝" }]
+    },
+    {
+      "tStartMs": 957624,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "陀囉陀囉．地唎尼．室佛囉耶" }]
+    },
+    {
+      "tStartMs": 961897,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "遮囉遮囉．摩麼罰摩囉" }]
+    },
+    {
+      "tStartMs": 965077,
+      "dDurationMs": 6556,
+      "segs": [{ "utf8": "穆帝隸．伊醯伊醯．室那室那．阿囉參佛囉舍利" }]
+    },
+    {
+      "tStartMs": 971633,
+      "dDurationMs": 7408,
+      "segs": [{ "utf8": "罰沙罰參．佛囉舍耶．呼嚧呼嚧摩囉．呼嚧呼嚧醯利" }]
+    },
+    {
+      "tStartMs": 979583,
+      "dDurationMs": 4065,
+      "segs": [{ "utf8": "娑囉娑囉，悉唎悉唎． 蘇嚧蘇嚧" }]
+    },
+    {
+      "tStartMs": 983843,
+      "dDurationMs": 4163,
+      "segs": [{ "utf8": "菩提夜菩提夜．菩馱夜菩馱夜" }]
+    },
+    {
+      "tStartMs": 988006,
+      "dDurationMs": 6457,
+      "segs": [{ "utf8": "彌帝唎夜．那囉謹墀．地利瑟尼那．波夜摩那" }]
+    },
+    {
+      "tStartMs": 994682,
+      "dDurationMs": 4950,
+      "segs": [{ "utf8": "娑婆訶．悉陀夜．娑婆訶．摩訶悉陀夜" }]
+    },
+    {
+      "tStartMs": 999632,
+      "dDurationMs": 4982,
+      "segs": [{ "utf8": "娑婆訶．悉陀喻藝．室皤囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 1004614,
+      "dDurationMs": 5507,
+      "segs": [{ "utf8": "那囉謹墀．娑婆訶．摩囉那囉．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1010122,
+      "dDurationMs": 3442,
+      "segs": [{ "utf8": "悉囉僧阿穆佉耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 1013798,
+      "dDurationMs": 3901,
+      "segs": [{ "utf8": "娑婆摩訶阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1018021,
+      "dDurationMs": 3365,
+      "segs": [{ "utf8": "者吉囉阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1021386,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "波陀摩羯悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1024894,
+      "dDurationMs": 4196,
+      "segs": [{ "utf8": "那囉謹墀皤伽囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 1029090,
+      "dDurationMs": 3573,
+      "segs": [{ "utf8": "摩婆利勝羯囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1032663,
+      "dDurationMs": 5409,
+      "segs": [{ "utf8": "南無喝囉怛那哆囉夜耶，南無阿唎耶" }]
+    },
+    {
+      "tStartMs": 1038072,
+      "dDurationMs": 3868,
+      "segs": [{ "utf8": "婆嚧吉帝．爍皤囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1041940,
+      "dDurationMs": 11373,
+      "segs": [{ "utf8": "唵，悉殿都．漫多囉．跋陀耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 1053090,
+      "dDurationMs": 10866,
+      "segs": [{ "utf8": "南無、喝啰怛那、哆啰夜耶" }]
+    },
+    {
+      "tStartMs": 1064229,
+      "dDurationMs": 2393,
+      "segs": [{ "utf8": "南無、阿例耶" }]
+    },
+    {
+      "tStartMs": 1066784,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "婆盧羯帝、爍缽啰耶" }]
+    },
+    {
+      "tStartMs": 1070292,
+      "dDurationMs": 2787,
+      "segs": [{ "utf8": "菩提薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 1073079,
+      "dDurationMs": 2918,
+      "segs": [{ "utf8": "摩訶薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 1075997,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "摩訶、迦盧尼迦耶" }]
+    },
+    {
+      "tStartMs": 1079357,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "唵，薩皤啰罰曳" }]
+    },
+    {
+      "tStartMs": 1081722,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "數怛那怛寫" }]
+    },
+    {
+      "tStartMs": 1083723,
+      "dDurationMs": 4327,
+      "segs": [{ "utf8": "南無、悉吉栗埵、伊蒙阿例耶" }]
+    },
+    {
+      "tStartMs": 1088051,
+      "dDurationMs": 3737,
+      "segs": [{ "utf8": "婆盧吉帝、室佛啰楞馱婆" }]
+    },
+    {
+      "tStartMs": 1091788,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "南無、那啰謹墀，醯利摩訶" }]
+    },
+    {
+      "tStartMs": 1095886,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "皤哆沙咩，薩婆阿他" }]
+    },
+    {
+      "tStartMs": 1099066,
+      "dDurationMs": 6031,
+      "segs": [{ "utf8": "豆輸朋，阿逝孕，薩婆薩哆那摩婆薩哆" }]
+    },
+    {
+      "tStartMs": 1105097,
+      "dDurationMs": 2983,
+      "segs": [{ "utf8": "那摩婆伽，摩罰特豆" }]
+    },
+    {
+      "tStartMs": 1108080,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "怛姪他．唵，阿婆盧醯" }]
+    },
+    {
+      "tStartMs": 1111162,
+      "dDurationMs": 4032,
+      "segs": [{ "utf8": "盧迦帝．迦羅帝．夷醯唎" }]
+    },
+    {
+      "tStartMs": 1115194,
+      "dDurationMs": 5205,
+      "segs": [{ "utf8": "摩訶菩提薩埵， 薩婆薩婆．摩囉摩囉" }]
+    },
+    {
+      "tStartMs": 1120890,
+      "dDurationMs": 4564,
+      "segs": [{ "utf8": "摩醯摩醯唎馱孕．俱盧俱盧羯蒙" }]
+    },
+    {
+      "tStartMs": 1125692,
+      "dDurationMs": 4760,
+      "segs": [{ "utf8": "度盧度盧罰闍耶帝． 摩訶罰闍耶帝" }]
+    },
+    {
+      "tStartMs": 1130624,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "陀囉陀囉．地唎尼．室佛囉耶" }]
+    },
+    {
+      "tStartMs": 1134897,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "遮囉遮囉．摩麼罰摩囉" }]
+    },
+    {
+      "tStartMs": 1138077,
+      "dDurationMs": 6556,
+      "segs": [{ "utf8": "穆帝隸．伊醯伊醯．室那室那．阿囉參佛囉舍利" }]
+    },
+    {
+      "tStartMs": 1144633,
+      "dDurationMs": 7408,
+      "segs": [{ "utf8": "罰沙罰參．佛囉舍耶．呼嚧呼嚧摩囉．呼嚧呼嚧醯利" }]
+    },
+    {
+      "tStartMs": 1152583,
+      "dDurationMs": 4065,
+      "segs": [{ "utf8": "娑囉娑囉，悉唎悉唎． 蘇嚧蘇嚧" }]
+    },
+    {
+      "tStartMs": 1156843,
+      "dDurationMs": 4163,
+      "segs": [{ "utf8": "菩提夜菩提夜．菩馱夜菩馱夜" }]
+    },
+    {
+      "tStartMs": 1161006,
+      "dDurationMs": 6457,
+      "segs": [{ "utf8": "彌帝唎夜．那囉謹墀．地利瑟尼那．波夜摩那" }]
+    },
+    {
+      "tStartMs": 1167682,
+      "dDurationMs": 4950,
+      "segs": [{ "utf8": "娑婆訶．悉陀夜．娑婆訶．摩訶悉陀夜" }]
+    },
+    {
+      "tStartMs": 1172632,
+      "dDurationMs": 4982,
+      "segs": [{ "utf8": "娑婆訶．悉陀喻藝．室皤囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 1177614,
+      "dDurationMs": 5507,
+      "segs": [{ "utf8": "那囉謹墀．娑婆訶．摩囉那囉．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1183122,
+      "dDurationMs": 3442,
+      "segs": [{ "utf8": "悉囉僧阿穆佉耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 1186798,
+      "dDurationMs": 3901,
+      "segs": [{ "utf8": "娑婆摩訶阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1191021,
+      "dDurationMs": 3365,
+      "segs": [{ "utf8": "者吉囉阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1194386,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "波陀摩羯悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1197894,
+      "dDurationMs": 4196,
+      "segs": [{ "utf8": "那囉謹墀皤伽囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 1202090,
+      "dDurationMs": 3573,
+      "segs": [{ "utf8": "摩婆利勝羯囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1205663,
+      "dDurationMs": 5409,
+      "segs": [{ "utf8": "南無喝囉怛那哆囉夜耶，南無阿唎耶" }]
+    },
+    {
+      "tStartMs": 1211072,
+      "dDurationMs": 3868,
+      "segs": [{ "utf8": "婆嚧吉帝．爍皤囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1214940,
+      "dDurationMs": 11373,
+      "segs": [{ "utf8": "唵，悉殿都．漫多囉．跋陀耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 1227090,
+      "dDurationMs": 10866,
+      "segs": [{ "utf8": "南無、喝啰怛那、哆啰夜耶" }]
+    },
+    {
+      "tStartMs": 1238229,
+      "dDurationMs": 2393,
+      "segs": [{ "utf8": "南無、阿例耶" }]
+    },
+    {
+      "tStartMs": 1240784,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "婆盧羯帝、爍缽啰耶" }]
+    },
+    {
+      "tStartMs": 1244292,
+      "dDurationMs": 2787,
+      "segs": [{ "utf8": "菩提薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 1247079,
+      "dDurationMs": 2918,
+      "segs": [{ "utf8": "摩訶薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 1249997,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "摩訶、迦盧尼迦耶" }]
+    },
+    {
+      "tStartMs": 1253357,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "唵，薩皤啰罰曳" }]
+    },
+    {
+      "tStartMs": 1255722,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "數怛那怛寫" }]
+    },
+    {
+      "tStartMs": 1257723,
+      "dDurationMs": 4327,
+      "segs": [{ "utf8": "南無、悉吉栗埵、伊蒙阿例耶" }]
+    },
+    {
+      "tStartMs": 1262051,
+      "dDurationMs": 3737,
+      "segs": [{ "utf8": "婆盧吉帝、室佛啰楞馱婆" }]
+    },
+    {
+      "tStartMs": 1265788,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "南無、那啰謹墀，醯利摩訶" }]
+    },
+    {
+      "tStartMs": 1269886,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "皤哆沙咩，薩婆阿他" }]
+    },
+    {
+      "tStartMs": 1273066,
+      "dDurationMs": 6031,
+      "segs": [{ "utf8": "豆輸朋，阿逝孕，薩婆薩哆那摩婆薩哆" }]
+    },
+    {
+      "tStartMs": 1279097,
+      "dDurationMs": 2983,
+      "segs": [{ "utf8": "那摩婆伽，摩罰特豆" }]
+    },
+    {
+      "tStartMs": 1282080,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "怛姪他．唵，阿婆盧醯" }]
+    },
+    {
+      "tStartMs": 1285162,
+      "dDurationMs": 4032,
+      "segs": [{ "utf8": "盧迦帝．迦羅帝．夷醯唎" }]
+    },
+    {
+      "tStartMs": 1289194,
+      "dDurationMs": 5205,
+      "segs": [{ "utf8": "摩訶菩提薩埵， 薩婆薩婆．摩囉摩囉" }]
+    },
+    {
+      "tStartMs": 1294890,
+      "dDurationMs": 4564,
+      "segs": [{ "utf8": "摩醯摩醯唎馱孕．俱盧俱盧羯蒙" }]
+    },
+    {
+      "tStartMs": 1299692,
+      "dDurationMs": 4760,
+      "segs": [{ "utf8": "度盧度盧罰闍耶帝． 摩訶罰闍耶帝" }]
+    },
+    {
+      "tStartMs": 1304624,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "陀囉陀囉．地唎尼．室佛囉耶" }]
+    },
+    {
+      "tStartMs": 1308897,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "遮囉遮囉．摩麼罰摩囉" }]
+    },
+    {
+      "tStartMs": 1312077,
+      "dDurationMs": 6556,
+      "segs": [{ "utf8": "穆帝隸．伊醯伊醯．室那室那．阿囉參佛囉舍利" }]
+    },
+    {
+      "tStartMs": 1318633,
+      "dDurationMs": 7408,
+      "segs": [{ "utf8": "罰沙罰參．佛囉舍耶．呼嚧呼嚧摩囉．呼嚧呼嚧醯利" }]
+    },
+    {
+      "tStartMs": 1326583,
+      "dDurationMs": 4065,
+      "segs": [{ "utf8": "娑囉娑囉，悉唎悉唎． 蘇嚧蘇嚧" }]
+    },
+    {
+      "tStartMs": 1330843,
+      "dDurationMs": 4163,
+      "segs": [{ "utf8": "菩提夜菩提夜．菩馱夜菩馱夜" }]
+    },
+    {
+      "tStartMs": 1335006,
+      "dDurationMs": 6457,
+      "segs": [{ "utf8": "彌帝唎夜．那囉謹墀．地利瑟尼那．波夜摩那" }]
+    },
+    {
+      "tStartMs": 1341682,
+      "dDurationMs": 4950,
+      "segs": [{ "utf8": "娑婆訶．悉陀夜．娑婆訶．摩訶悉陀夜" }]
+    },
+    {
+      "tStartMs": 1346632,
+      "dDurationMs": 4982,
+      "segs": [{ "utf8": "娑婆訶．悉陀喻藝．室皤囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 1351614,
+      "dDurationMs": 5507,
+      "segs": [{ "utf8": "那囉謹墀．娑婆訶．摩囉那囉．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1357122,
+      "dDurationMs": 3442,
+      "segs": [{ "utf8": "悉囉僧阿穆佉耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 1360798,
+      "dDurationMs": 3901,
+      "segs": [{ "utf8": "娑婆摩訶阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1365021,
+      "dDurationMs": 3365,
+      "segs": [{ "utf8": "者吉囉阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1368386,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "波陀摩羯悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1371894,
+      "dDurationMs": 4196,
+      "segs": [{ "utf8": "那囉謹墀皤伽囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 1376090,
+      "dDurationMs": 3573,
+      "segs": [{ "utf8": "摩婆利勝羯囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1379663,
+      "dDurationMs": 5409,
+      "segs": [{ "utf8": "南無喝囉怛那哆囉夜耶，南無阿唎耶" }]
+    },
+    {
+      "tStartMs": 1385072,
+      "dDurationMs": 3868,
+      "segs": [{ "utf8": "婆嚧吉帝．爍皤囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1388940,
+      "dDurationMs": 11373,
+      "segs": [{ "utf8": "唵，悉殿都．漫多囉．跋陀耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 1402090,
+      "dDurationMs": 10866,
+      "segs": [{ "utf8": "南無、喝啰怛那、哆啰夜耶" }]
+    },
+    {
+      "tStartMs": 1413229,
+      "dDurationMs": 2393,
+      "segs": [{ "utf8": "南無、阿例耶" }]
+    },
+    {
+      "tStartMs": 1415784,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "婆盧羯帝、爍缽啰耶" }]
+    },
+    {
+      "tStartMs": 1419292,
+      "dDurationMs": 2787,
+      "segs": [{ "utf8": "菩提薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 1422079,
+      "dDurationMs": 2918,
+      "segs": [{ "utf8": "摩訶薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 1424997,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "摩訶、迦盧尼迦耶" }]
+    },
+    {
+      "tStartMs": 1428357,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "唵，薩皤啰罰曳" }]
+    },
+    {
+      "tStartMs": 1430722,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "數怛那怛寫" }]
+    },
+    {
+      "tStartMs": 1432723,
+      "dDurationMs": 4327,
+      "segs": [{ "utf8": "南無、悉吉栗埵、伊蒙阿例耶" }]
+    },
+    {
+      "tStartMs": 1437051,
+      "dDurationMs": 3737,
+      "segs": [{ "utf8": "婆盧吉帝、室佛啰楞馱婆" }]
+    },
+    {
+      "tStartMs": 1440788,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "南無、那啰謹墀，醯利摩訶" }]
+    },
+    {
+      "tStartMs": 1444886,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "皤哆沙咩，薩婆阿他" }]
+    },
+    {
+      "tStartMs": 1448066,
+      "dDurationMs": 6031,
+      "segs": [{ "utf8": "豆輸朋，阿逝孕，薩婆薩哆那摩婆薩哆" }]
+    },
+    {
+      "tStartMs": 1454097,
+      "dDurationMs": 2983,
+      "segs": [{ "utf8": "那摩婆伽，摩罰特豆" }]
+    },
+    {
+      "tStartMs": 1457080,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "怛姪他．唵，阿婆盧醯" }]
+    },
+    {
+      "tStartMs": 1460162,
+      "dDurationMs": 4032,
+      "segs": [{ "utf8": "盧迦帝．迦羅帝．夷醯唎" }]
+    },
+    {
+      "tStartMs": 1464194,
+      "dDurationMs": 5205,
+      "segs": [{ "utf8": "摩訶菩提薩埵， 薩婆薩婆．摩囉摩囉" }]
+    },
+    {
+      "tStartMs": 1469890,
+      "dDurationMs": 4564,
+      "segs": [{ "utf8": "摩醯摩醯唎馱孕．俱盧俱盧羯蒙" }]
+    },
+    {
+      "tStartMs": 1474692,
+      "dDurationMs": 4760,
+      "segs": [{ "utf8": "度盧度盧罰闍耶帝． 摩訶罰闍耶帝" }]
+    },
+    {
+      "tStartMs": 1479624,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "陀囉陀囉．地唎尼．室佛囉耶" }]
+    },
+    {
+      "tStartMs": 1483897,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "遮囉遮囉．摩麼罰摩囉" }]
+    },
+    {
+      "tStartMs": 1487077,
+      "dDurationMs": 6556,
+      "segs": [{ "utf8": "穆帝隸．伊醯伊醯．室那室那．阿囉參佛囉舍利" }]
+    },
+    {
+      "tStartMs": 1493633,
+      "dDurationMs": 7408,
+      "segs": [{ "utf8": "罰沙罰參．佛囉舍耶．呼嚧呼嚧摩囉．呼嚧呼嚧醯利" }]
+    },
+    {
+      "tStartMs": 1501583,
+      "dDurationMs": 4065,
+      "segs": [{ "utf8": "娑囉娑囉，悉唎悉唎． 蘇嚧蘇嚧" }]
+    },
+    {
+      "tStartMs": 1505843,
+      "dDurationMs": 4163,
+      "segs": [{ "utf8": "菩提夜菩提夜．菩馱夜菩馱夜" }]
+    },
+    {
+      "tStartMs": 1510006,
+      "dDurationMs": 6457,
+      "segs": [{ "utf8": "彌帝唎夜．那囉謹墀．地利瑟尼那．波夜摩那" }]
+    },
+    {
+      "tStartMs": 1516682,
+      "dDurationMs": 4950,
+      "segs": [{ "utf8": "娑婆訶．悉陀夜．娑婆訶．摩訶悉陀夜" }]
+    },
+    {
+      "tStartMs": 1521632,
+      "dDurationMs": 4982,
+      "segs": [{ "utf8": "娑婆訶．悉陀喻藝．室皤囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 1526614,
+      "dDurationMs": 5507,
+      "segs": [{ "utf8": "那囉謹墀．娑婆訶．摩囉那囉．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1532122,
+      "dDurationMs": 3442,
+      "segs": [{ "utf8": "悉囉僧阿穆佉耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 1535798,
+      "dDurationMs": 3901,
+      "segs": [{ "utf8": "娑婆摩訶阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1540021,
+      "dDurationMs": 3365,
+      "segs": [{ "utf8": "者吉囉阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1543386,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "波陀摩羯悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1546894,
+      "dDurationMs": 4196,
+      "segs": [{ "utf8": "那囉謹墀皤伽囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 1551090,
+      "dDurationMs": 3573,
+      "segs": [{ "utf8": "摩婆利勝羯囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1554663,
+      "dDurationMs": 5409,
+      "segs": [{ "utf8": "南無喝囉怛那哆囉夜耶，南無阿唎耶" }]
+    },
+    {
+      "tStartMs": 1560072,
+      "dDurationMs": 3868,
+      "segs": [{ "utf8": "婆嚧吉帝．爍皤囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1563940,
+      "dDurationMs": 11373,
+      "segs": [{ "utf8": "唵，悉殿都．漫多囉．跋陀耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 1576090,
+      "dDurationMs": 10866,
+      "segs": [{ "utf8": "南無、喝啰怛那、哆啰夜耶" }]
+    },
+    {
+      "tStartMs": 1587229,
+      "dDurationMs": 2393,
+      "segs": [{ "utf8": "南無、阿例耶" }]
+    },
+    {
+      "tStartMs": 1589784,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "婆盧羯帝、爍缽啰耶" }]
+    },
+    {
+      "tStartMs": 1593292,
+      "dDurationMs": 2787,
+      "segs": [{ "utf8": "菩提薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 1596079,
+      "dDurationMs": 2918,
+      "segs": [{ "utf8": "摩訶薩埵婆耶" }]
+    },
+    {
+      "tStartMs": 1598997,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "摩訶、迦盧尼迦耶" }]
+    },
+    {
+      "tStartMs": 1602357,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "唵，薩皤啰罰曳" }]
+    },
+    {
+      "tStartMs": 1604722,
+      "dDurationMs": 2000,
+      "segs": [{ "utf8": "數怛那怛寫" }]
+    },
+    {
+      "tStartMs": 1606723,
+      "dDurationMs": 4327,
+      "segs": [{ "utf8": "南無、悉吉栗埵、伊蒙阿例耶" }]
+    },
+    {
+      "tStartMs": 1611051,
+      "dDurationMs": 3737,
+      "segs": [{ "utf8": "婆盧吉帝、室佛啰楞馱婆" }]
+    },
+    {
+      "tStartMs": 1614788,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "南無、那啰謹墀，醯利摩訶" }]
+    },
+    {
+      "tStartMs": 1618886,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "皤哆沙咩，薩婆阿他" }]
+    },
+    {
+      "tStartMs": 1622066,
+      "dDurationMs": 6031,
+      "segs": [{ "utf8": "豆輸朋，阿逝孕，薩婆薩哆那摩婆薩哆" }]
+    },
+    {
+      "tStartMs": 1628097,
+      "dDurationMs": 2983,
+      "segs": [{ "utf8": "那摩婆伽，摩罰特豆" }]
+    },
+    {
+      "tStartMs": 1631080,
+      "dDurationMs": 3082,
+      "segs": [{ "utf8": "怛姪他．唵，阿婆盧醯" }]
+    },
+    {
+      "tStartMs": 1634162,
+      "dDurationMs": 4032,
+      "segs": [{ "utf8": "盧迦帝．迦羅帝．夷醯唎" }]
+    },
+    {
+      "tStartMs": 1638194,
+      "dDurationMs": 5205,
+      "segs": [{ "utf8": "摩訶菩提薩埵， 薩婆薩婆．摩囉摩囉" }]
+    },
+    {
+      "tStartMs": 1643890,
+      "dDurationMs": 4564,
+      "segs": [{ "utf8": "摩醯摩醯唎馱孕．俱盧俱盧羯蒙" }]
+    },
+    {
+      "tStartMs": 1648692,
+      "dDurationMs": 4760,
+      "segs": [{ "utf8": "度盧度盧罰闍耶帝． 摩訶罰闍耶帝" }]
+    },
+    {
+      "tStartMs": 1653624,
+      "dDurationMs": 4098,
+      "segs": [{ "utf8": "陀囉陀囉．地唎尼．室佛囉耶" }]
+    },
+    {
+      "tStartMs": 1657897,
+      "dDurationMs": 3180,
+      "segs": [{ "utf8": "遮囉遮囉．摩麼罰摩囉" }]
+    },
+    {
+      "tStartMs": 1661077,
+      "dDurationMs": 6556,
+      "segs": [{ "utf8": "穆帝隸．伊醯伊醯．室那室那．阿囉參佛囉舍利" }]
+    },
+    {
+      "tStartMs": 1667633,
+      "dDurationMs": 7408,
+      "segs": [{ "utf8": "罰沙罰參．佛囉舍耶．呼嚧呼嚧摩囉．呼嚧呼嚧醯利" }]
+    },
+    {
+      "tStartMs": 1675583,
+      "dDurationMs": 4065,
+      "segs": [{ "utf8": "娑囉娑囉，悉唎悉唎． 蘇嚧蘇嚧" }]
+    },
+    {
+      "tStartMs": 1679843,
+      "dDurationMs": 4163,
+      "segs": [{ "utf8": "菩提夜菩提夜．菩馱夜菩馱夜" }]
+    },
+    {
+      "tStartMs": 1684006,
+      "dDurationMs": 6457,
+      "segs": [{ "utf8": "彌帝唎夜．那囉謹墀．地利瑟尼那．波夜摩那" }]
+    },
+    {
+      "tStartMs": 1690682,
+      "dDurationMs": 4950,
+      "segs": [{ "utf8": "娑婆訶．悉陀夜．娑婆訶．摩訶悉陀夜" }]
+    },
+    {
+      "tStartMs": 1695632,
+      "dDurationMs": 4982,
+      "segs": [{ "utf8": "娑婆訶．悉陀喻藝．室皤囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 1700614,
+      "dDurationMs": 5507,
+      "segs": [{ "utf8": "那囉謹墀．娑婆訶．摩囉那囉．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1706122,
+      "dDurationMs": 3442,
+      "segs": [{ "utf8": "悉囉僧阿穆佉耶，娑婆訶" }]
+    },
+    {
+      "tStartMs": 1709798,
+      "dDurationMs": 3901,
+      "segs": [{ "utf8": "娑婆摩訶阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1714021,
+      "dDurationMs": 3365,
+      "segs": [{ "utf8": "者吉囉阿悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1717386,
+      "dDurationMs": 3508,
+      "segs": [{ "utf8": "波陀摩羯悉陀夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1720894,
+      "dDurationMs": 4196,
+      "segs": [{ "utf8": "那囉謹墀皤伽囉耶． 娑婆訶" }]
+    },
+    {
+      "tStartMs": 1725090,
+      "dDurationMs": 3573,
+      "segs": [{ "utf8": "摩婆利勝羯囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1728663,
+      "dDurationMs": 5409,
+      "segs": [{ "utf8": "南無喝囉怛那哆囉夜耶，南無阿唎耶" }]
+    },
+    {
+      "tStartMs": 1734072,
+      "dDurationMs": 3868,
+      "segs": [{ "utf8": "婆嚧吉帝．爍皤囉夜．娑婆訶" }]
+    },
+    {
+      "tStartMs": 1737940,
+      "dDurationMs": 11373,
+      "segs": [{ "utf8": "唵，悉殿都．漫多囉．跋陀耶，娑婆訶" }]
+    }
+  ]
+}

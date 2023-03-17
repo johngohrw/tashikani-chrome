@@ -1,4 +1,4 @@
-import { IS_DEBUG } from "./globals.js";
+import { IS_DEBUG } from "../globals.js";
 
 export function error(callerContext, ...errorMessage) {
   console.error(`[${callerContext}]:`, ...errorMessage);
@@ -69,3 +69,4 @@ export function injectScript(src) {
     }, 50);
   });
 }
+

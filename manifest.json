@@ -16,12 +16,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": [
-        "scripts/requestListener.js",
-        "scripts/utils.js",
-        "scripts/globals.js",
-        "scripts/youtube/main.js"
-      ],
+      "resources": ["scripts/*"],
       "matches": ["*://*.youtube.com/*"]
     }
   ],
