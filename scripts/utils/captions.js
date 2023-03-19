@@ -62,7 +62,89 @@ export function colorfulCaptions() {
 
 export function highlightableCaptions() {
   debug("highlightableCaptions", "start hijacking");
+
+  function getByClass(className) {
+    return document.getElementsByClassName(className)[0];
+  }
+
+  function wordHover(event) {
+    console.log(event.target.innerText);
+    getByClass("hijacked-captions__panel-title").innerText =
+      event.target.innerText;
+    getByClass(
+      "hijacked-captions__panel-description"
+    ).innerText = `description for ${event.target.innerText}`;
+  }
+
+  const styles = document.createElement("style");
+  styles.innerHTML = `
+    :root {
+      --hover-bg-color: white;
+      --panel-bg-color: rgba(0, 0, 0, 0);
+      --panel-border-color: rgba(255, 255, 255, 0);
+    }
+    .hijacked-captions__word {
+      transition-duration: 200ms;
+    }
+    .hijacked-captions__word:hover {
+      color: #7ed0ff;
+    }
+    #ytp-caption-window-container,
+    #ytp-caption-window-container * {
+      box-sizing: border-box;
+    }
+    .hijacked-captions__panel {
+      width: clamp(0px, calc(100% - 20px), 600px);
+      height: 300px;
+      background: var(--panel-bg-color);
+      border: 1px solid var(--panel-border-color);
+      mix-blend-mode: exclusion;
+      border-radius: 4px;    
+      z-index: 10;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+
+      padding: 1rem 1rem;
+    }
+    .hijacked-captions__panel-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .hijacked-captions__panel-description {
+      font-size: 1.5rem;
+    }
+  `;
+
+  document.body.appendChild(styles);
+
+  // template element for caption word segment.
+  const template = document.createElement("span");
+  template.classList.add("hijacked-captions__word");
+
+  // panel elements creation
+  const panel = document.createElement("div");
+  panel.classList.add("hijacked-captions__panel");
+  const titleEl = document.createElement("div");
+  titleEl.classList.add("hijacked-captions__panel-title");
+  panel.appendChild(titleEl);
+  const descriptionEl = document.createElement("div");
+  descriptionEl.classList.add("hijacked-captions__panel-description");
+  panel.appendChild(descriptionEl);
+
+  // append panel to video caption overlay
+  document.getElementById(YOUTUBE_CAPTION_CONTAINER_ID).appendChild(panel);
+
   return hijackCaptions((captionEl) => {
-    console.log(captionEl);
+    //TODO: very naive word splitting implementation here
+    const captionWords = captionEl.innerText.split(" ");
+    captionEl.innerText = "";
+    captionWords.forEach((word, _index) => {
+      const el = template.cloneNode(true);
+      el.innerText = `${word}${_index < captionWords.length && " "}`;
+      el.onmouseover = wordHover;
+      captionEl.appendChild(el);
+    });
   });
 }
