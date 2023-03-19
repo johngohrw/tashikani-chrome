@@ -5,11 +5,24 @@ import { YOUTUBE_CAPTION_CONTAINER_ID } from "../globals.js";
 
 const captionData = {};
 
+function onCaptionLoad(request, paramsObj) {
+  const incomingCaption = {};
+  incomingCaption[paramsObj.lang] = JSON.parse(request.response);
+  const videoHasEntry = Object.prototype.hasOwnProperty.call(
+    captionData,
+    paramsObj.v
+  );
+  captionData[paramsObj.v] = videoHasEntry
+    ? { ...captionData[paramsObj.v], ...incomingCaption }
+    : incomingCaption;
+
+  debug("onCaptionLoad", `(${paramsObj.v}, ${paramsObj.lang})`, captionData);
+}
+
 interceptRequests({
   timedText: {
     regex: /timedtext/g,
     callback: (request) => {
-      console.log("timedtext!", request);
       const reqURL = new URL(request._url);
       const paramsObj = Array.from(reqURL.searchParams).reduce(
         (acc, [key, value]) => {
@@ -18,18 +31,9 @@ interceptRequests({
         },
         {}
       );
-
       request.onload = () => {
         if (request.readyState === 4 && request.status === 200) {
-          const incomingCaption = {};
-          incomingCaption[paramsObj.lang] = JSON.parse(request.response);
-          const videoHasEntry = Object.prototype.hasOwnProperty.call(
-            captionData,
-            paramsObj.v
-          );
-          captionData[paramsObj.v] = videoHasEntry
-            ? { ...captionData[paramsObj.v], ...incomingCaption }
-            : incomingCaption;
+          onCaptionLoad(request, paramsObj);
         }
       };
     },
@@ -38,7 +42,7 @@ interceptRequests({
 
 let nodeCheckInterval, captionsObserver;
 const onPathChange = function (current, previous) {
-  debug("onPathChange", "current path:", current);
+  // debug("onPathChange", "current path:", current);
 
   // clear previous interval
   if (nodeCheckInterval) {
@@ -49,7 +53,7 @@ const onPathChange = function (current, previous) {
 
   // disconnect captions observer if still connected
   if (captionsObserver) {
-    debug("onPathChange", "captionsObserver cleared");
+    debug("onPathChange", "captionsObserver cleared (stopped hijacking)");
     captionsObserver.disconnect();
     captionsObserver = null;
   }
