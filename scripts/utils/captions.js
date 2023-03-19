@@ -94,23 +94,24 @@ export function highlightableCaptions() {
       box-sizing: border-box;
     }
     .hijacked-captions__panel {
-      width: clamp(0px, calc(100% - 20px), 600px);
-      height: 300px;
+      width: 100%;
+      height: 100%;
       background: var(--panel-bg-color);
       border: 1px solid var(--panel-border-color);
       mix-blend-mode: exclusion;
       border-radius: 4px;    
       z-index: 10;
       position: absolute;
-      top: 10px;
-      left: 10px;
+      top: 0px;
+      left: 0px;
 
-      padding: 1rem 1rem;
+      padding: 1.5rem 1.5rem;
     }
     .hijacked-captions__panel-title {
       font-size: 2.5rem;
       font-weight: 600;
       margin-bottom: 1rem;
+      filter: hue-rotate(180deg);
     }
     .hijacked-captions__panel-description {
       font-size: 1.5rem;
