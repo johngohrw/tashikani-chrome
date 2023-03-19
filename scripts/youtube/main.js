@@ -2,12 +2,72 @@ import {
   haltInterception,
   interceptRequests,
 } from "../utils/requestListener.js";
-import { debug, isWatch, pathChecker } from "../utils/index.js";
+import { debug, isWatch, pathChecker, waitForNode } from "../utils/index.js";
+
+function hijackCaptions(callback) {
+  debug("hijackCaptions", "started");
+  const observerConfig = {
+    childList: true,
+    subtree: true,
+  };
+
+  const targetNode = document.getElementById("ytp-caption-window-container");
+  const observer = new MutationObserver((mutationList, observer) => {
+    for (const mutation of mutationList) {
+      const classList = Array.from(mutation.target.classList);
+      if (classList.includes("ytp-caption-segment")) {
+        const captionEl = mutation.target;
+
+        // Disconnect it temporarily while we make changes to the observed element.
+        // An infinite loop will occur otherwise.
+        observer.disconnect();
+
+        callback(captionEl);
+
+        // Re-observe the element.
+        observer.observe(targetNode, observerConfig);
+      }
+    }
+  });
+
+  observer.observe(targetNode, observerConfig);
+
+  function stopHijack() {
+    debug("hijackCaptions", "stopped caption hijacking");
+    observer.disconnect();
+  }
+
+  return [observer, stop];
+}
+
+function LGBTcaptions() {
+  return hijackCaptions((captionEl) => {
+    const colors = [
+      "red",
+      "orange",
+      "yellow",
+      "green",
+      "lightblue",
+      "purple",
+      "pink",
+    ];
+
+    const captionString = captionEl.innerText.split("");
+    captionEl.innerText = "";
+    captionString.forEach((char, _index) => {
+      const el = document.createElement("span");
+      el.style = `color: ${colors[_index % colors.length]}`;
+      el.innerText = char;
+      captionEl.appendChild(el);
+    });
+  }));
+}
 
 class CaptionEngine {
   constructor() {
     this.url = null;
     this.active = false;
+    this.observer = null;
   }
 
   activate(url) {
@@ -32,17 +92,17 @@ class CaptionEngine {
 const caption = new CaptionEngine();
 
 const onPathChange = function (current, previous) {
-  debug("onPathChange", current);
+  debug("onPathChange", "current path:", current);
   if (isWatch(current)) {
     console.log("watch!");
+
     caption.activate(current);
   } else {
     console.log("not watch...");
     caption.deactivate();
   }
 };
-
-const pathCheckInterval = pathChecker(window, onPathChange, 500, true);
+console.log(">", this);
 
 interceptRequests({
   timedText: {
@@ -51,67 +111,13 @@ interceptRequests({
   },
 });
 
-setTimeout(() => {
-  console.log("halted");
-  haltInterception();
-}, 10000);
+haltInterception();
 
-setTimeout(() => {
-  console.log("started again");
-  interceptRequests({
-    timedText: {
-      regex: /timedtext/g,
-      callback: (request) => console.log("timedtext!", request),
-    },
-  });
-}, 20000);
+const pathCheckInterval = pathChecker(window, onPathChange, 500, true);
 
-setTimeout(() => {
-  console.log("halted again");
-  haltInterception();
-}, 30000);
-
-setTimeout(() => {
-  const observerConfig = {
-    childList: true,
-    subtree: true,
-  };
-
-  const targetNode = document.getElementById("ytp-caption-window-container");
-  const observer = new MutationObserver((mutationList, observer) => {
-    for (const mutation of mutationList) {
-      const classList = Array.from(mutation.target.classList);
-      if (classList.includes("ytp-caption-segment")) {
-        const captionEl = mutation.target;
-
-        // Disconnect it temporarily while we make changes to the observed element.
-        // An infinite loop will occur otherwise.
-        observer.disconnect();
-
-        const colors = [
-          "red",
-          "orange",
-          "yellow",
-          "green",
-          "lightblue",
-          "purple",
-          "pink",
-        ];
-
-        const captionString = captionEl.innerText.split("");
-        captionEl.innerText = "";
-        captionString.forEach((char, _index) => {
-          const el = document.createElement("span");
-          el.style = `color: ${colors[_index % colors.length]}`;
-          el.innerText = char;
-          captionEl.appendChild(el);
-        });
-
-        // Re-observe the element.
-        observer.observe(targetNode, observerConfig);
-      }
-    }
-  });
-
-  observer.observe(targetNode, observerConfig);
-}, 3000);
+waitForNode({
+  document,
+  id: "ytp-caption-window-container",
+}).then((q) => {
+  console.log("found!", q);
+});

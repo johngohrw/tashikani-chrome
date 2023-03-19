@@ -42,6 +42,39 @@ export function pathChecker(
   }, checkInterval);
 }
 
+export function waitForNode({
+  document,
+  className,
+  id,
+  checkInterval = 100,
+  timeout = null,
+}) {
+  return new Promise((resolve, reject) => {
+    let startTime = new Date().getTime();
+    debug(
+      "waitForNode",
+      `waiting for ${id ? "#" : ""}${id ?? ""}${id && className ? " or " : ""}${
+        className ? "." : ""
+      }${className ?? ""}`
+    );
+    const checker = setInterval(() => {
+      const queriedNode =
+        (id && document.getElementById(id)) ||
+        (className && document.getElementsByClassName(className));
+      if (queriedNode) {
+        debug("waitForNode", id || className, "(done)", queriedNode);
+        clearInterval(checker);
+        resolve(queriedNode);
+      }
+      if (timeout && new Date().getTime() - startTime > timeout) {
+        error("waitForNode", id || className, "(timeout)");
+        clearInterval(checker);
+        reject();
+      }
+    }, checkInterval);
+  });
+}
+
 export function injectScript(src) {
   let done = false;
   const s = document.createElement("script");
@@ -69,4 +102,3 @@ export function injectScript(src) {
     }, 50);
   });
 }
-
