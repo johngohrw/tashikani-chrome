@@ -21,12 +21,12 @@ export function isWatch(urlString) {
   return /watch/g.test(urlString);
 }
 
-export function pathChecker(
+export function pathChecker({
   window,
   callback,
-  checkInterval,
-  initialFire = false
-) {
+  checkInterval = 500,
+  initialFire = false,
+}) {
   let previous = getFullPathString(window);
   let current = getFullPathString(window);
   if (initialFire) {
@@ -77,7 +77,7 @@ export function waitForNodePromise({
 
 export function waitForNode({
   document,
-  className,
+  className = null,
   id,
   checkInterval = 100,
   timeout = null,
@@ -124,7 +124,7 @@ export function injectScript(src) {
       if (done) {
         debug("injectScript", src, "(done)");
         clearInterval(checker);
-        resolve();
+        resolve(true);
       }
       if (new Date().getTime() - startTime > timeoutDuration) {
         error("injectScript", src, "(timeout)");

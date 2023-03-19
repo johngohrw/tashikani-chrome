@@ -1,71 +1,42 @@
-import {
-  haltInterception,
-  interceptRequests,
-} from "../utils/requestListener.js";
+import { interceptRequests } from "../utils/requestListener.js";
 import { debug, isWatch, pathChecker, waitForNode } from "../utils/index.js";
+import { colorfulCaptions, highlightableCaptions } from "../utils/captions.js";
+import { YOUTUBE_CAPTION_CONTAINER_ID } from "../globals.js";
 
-const YOUTUBE_CAPTION_CONTAINER_ID = "ytp-caption-window-container";
-const YOUTUBE_CAPTION_SEGMENT_CLASS = "ytp-caption-segment";
-const YOUTUBE_CAPTION_TOP = "ytp-caption-window-top";
-const YOUTUBE_CAPTION_BOTTOM = "ytp-caption-window-bottom";
+const captionData = {};
 
-function hijackCaptions(callback) {
-  const observerConfig = {
-    childList: true,
-    subtree: true,
-  };
+interceptRequests({
+  timedText: {
+    regex: /timedtext/g,
+    callback: (request) => {
+      console.log("timedtext!", request);
+      const reqURL = new URL(request._url);
+      const paramsObj = Array.from(reqURL.searchParams).reduce(
+        (acc, [key, value]) => {
+          acc[key] = value;
+          return acc;
+        },
+        {}
+      );
 
-  const targetNode = document.getElementById(YOUTUBE_CAPTION_CONTAINER_ID);
-  const observer = new MutationObserver((mutationList, observer) => {
-    mutationList.forEach((mutation) => {
-      const classList = Array.from(mutation.target.classList);
-      if (
-        classList.includes(YOUTUBE_CAPTION_SEGMENT_CLASS) &&
-        !Array.from(mutation.target.offsetParent.classList).includes(
-          YOUTUBE_CAPTION_TOP
-        )
-      ) {
-        // Disconnect it temporarily while we make changes to the observed element.
-        // An infinite loop will occur otherwise.
-        observer.disconnect();
-        // Process mutations
-        callback(mutation.target);
-        // Re-observe the element.
-        observer.observe(targetNode, observerConfig);
-      }
-    });
-  });
-
-  observer.observe(targetNode, observerConfig);
-  return observer;
-}
-
-function colorfulCaptions() {
-  debug("colorfulCaptions", "start hijacking");
-  return hijackCaptions((captionEl) => {
-    const colors = [
-      "red",
-      "orange",
-      "yellow",
-      "green",
-      "lightblue",
-      "purple",
-      "pink",
-    ];
-
-    const captionString = captionEl.innerText.split("");
-    captionEl.innerText = "";
-    captionString.forEach((char, _index) => {
-      const el = document.createElement("span");
-      el.style = `color: ${colors[_index % colors.length]}`;
-      el.innerText = char;
-      captionEl.appendChild(el);
-    });
-  });
-}
+      request.onload = () => {
+        if (request.readyState === 4 && request.status === 200) {
+          const incomingCaption = {};
+          incomingCaption[paramsObj.lang] = JSON.parse(request.response);
+          const videoHasEntry = Object.prototype.hasOwnProperty.call(
+            captionData,
+            paramsObj.v
+          );
+          captionData[paramsObj.v] = videoHasEntry
+            ? { ...captionData[paramsObj.v], ...incomingCaption }
+            : incomingCaption;
+        }
+      };
+    },
+  },
+});
 
 let nodeCheckInterval, captionsObserver;
-
 const onPathChange = function (current, previous) {
   debug("onPathChange", "current path:", current);
 
@@ -90,7 +61,7 @@ const onPathChange = function (current, previous) {
       document,
       id: YOUTUBE_CAPTION_CONTAINER_ID,
       callback: (element) => {
-        captionsObserver = colorfulCaptions();
+        captionsObserver = highlightableCaptions();
       },
     });
   } else {
@@ -98,13 +69,9 @@ const onPathChange = function (current, previous) {
   }
 };
 
-interceptRequests({
-  timedText: {
-    regex: /timedtext/g,
-    callback: (request) => console.log("timedtext!", request),
-  },
+const pathCheckInterval = pathChecker({
+  window,
+  callback: onPathChange,
+  checkInterval: 500,
+  initialFire: true,
 });
-
-haltInterception();
-
-const pathCheckInterval = pathChecker(window, onPathChange, 500, true);

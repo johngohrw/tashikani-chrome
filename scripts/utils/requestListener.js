@@ -45,6 +45,7 @@ export function interceptRequests(matchers) {
 }
 
 export function haltInterception() {
+  debug("interceptRequests", "stopping interception...");
   window.XMLHttpRequest.prototype.open =
     window.XMLHttpRequest.prototype.openOriginal;
   window.XMLHttpRequest.prototype.send =
