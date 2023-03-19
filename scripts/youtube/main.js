@@ -8,7 +8,6 @@ const YOUTUBE_CAPTION_CONTAINER_ID = "ytp-caption-window-container";
 const YOUTUBE_CAPTION_SEGMENT_CLASS = "ytp-caption-segment";
 
 function hijackCaptions(callback) {
-  debug("hijackCaptions", "started");
   const observerConfig = {
     childList: true,
     subtree: true,
@@ -25,6 +24,7 @@ function hijackCaptions(callback) {
         // An infinite loop will occur otherwise.
         observer.disconnect();
 
+        // Process mutations
         callback(captionEl);
 
         // Re-observe the element.
@@ -34,16 +34,11 @@ function hijackCaptions(callback) {
   });
 
   observer.observe(targetNode, observerConfig);
-
-  function stopHijack() {
-    debug("hijackCaptions", "stopped");
-    observer.disconnect();
-  }
-
-  return [observer, stop];
+  return observer;
 }
 
 function colorfulCaptions() {
+  debug("colorfulCaptions", "start hijacking");
   return hijackCaptions((captionEl) => {
     const colors = [
       "red",
@@ -66,37 +61,37 @@ function colorfulCaptions() {
   });
 }
 
-let nodeCheckInterval, captionsObserver, stopper;
+let nodeCheckInterval, captionsObserver;
 
 const onPathChange = function (current, previous) {
   debug("onPathChange", "current path:", current);
 
   // clear previous interval
   if (nodeCheckInterval) {
-    console.log("nodecheck cleared!");
+    debug("onPathChange", "nodeCheckInterval cleared");
     clearInterval(nodeCheckInterval);
     nodeCheckInterval = null;
   }
 
   // disconnect captions observer if still connected
   if (captionsObserver) {
+    debug("onPathChange", "captionsObserver cleared");
     captionsObserver.disconnect();
     captionsObserver = null;
   }
 
   // check for window container
   if (isWatch(current)) {
-    console.log("watch!");
+    // console.log("watch!");
     nodeCheckInterval = waitForNode({
       document,
       id: YOUTUBE_CAPTION_CONTAINER_ID,
       callback: (element) => {
-        console.log("found!", element);
-        [captionsObserver, stopper] = colorfulCaptions();
+        captionsObserver = colorfulCaptions();
       },
     });
   } else {
-    console.log("not watch...");
+    // console.log("not watch...");
   }
 };
 
