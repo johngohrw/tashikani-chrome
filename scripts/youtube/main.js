@@ -4,6 +4,9 @@ import {
 } from "../utils/requestListener.js";
 import { debug, isWatch, pathChecker, waitForNode } from "../utils/index.js";
 
+const YOUTUBE_CAPTION_CONTAINER_ID = "ytp-caption-window-container";
+const YOUTUBE_CAPTION_SEGMENT_CLASS = "ytp-caption-segment";
+
 function hijackCaptions(callback) {
   debug("hijackCaptions", "started");
   const observerConfig = {
@@ -11,11 +14,11 @@ function hijackCaptions(callback) {
     subtree: true,
   };
 
-  const targetNode = document.getElementById("ytp-caption-window-container");
+  const targetNode = document.getElementById(YOUTUBE_CAPTION_CONTAINER_ID);
   const observer = new MutationObserver((mutationList, observer) => {
     for (const mutation of mutationList) {
       const classList = Array.from(mutation.target.classList);
-      if (classList.includes("ytp-caption-segment")) {
+      if (classList.includes(YOUTUBE_CAPTION_SEGMENT_CLASS)) {
         const captionEl = mutation.target;
 
         // Disconnect it temporarily while we make changes to the observed element.
@@ -33,14 +36,14 @@ function hijackCaptions(callback) {
   observer.observe(targetNode, observerConfig);
 
   function stopHijack() {
-    debug("hijackCaptions", "stopped caption hijacking");
+    debug("hijackCaptions", "stopped");
     observer.disconnect();
   }
 
   return [observer, stop];
 }
 
-function LGBTcaptions() {
+function colorfulCaptions() {
   return hijackCaptions((captionEl) => {
     const colors = [
       "red",
@@ -60,49 +63,42 @@ function LGBTcaptions() {
       el.innerText = char;
       captionEl.appendChild(el);
     });
-  }));
+  });
 }
 
-class CaptionEngine {
-  constructor() {
-    this.url = null;
-    this.active = false;
-    this.observer = null;
-  }
-
-  activate(url) {
-    this.active = true;
-    this.url = url;
-
-    console.log(document);
-
-    debug("CaptionEngine", "activate!", url);
-  }
-
-  deactivate() {
-    if (this.active) {
-      this.url = null;
-      this.active = false;
-
-      debug("CaptionEngine", "deactivate!");
-    }
-  }
-}
-
-const caption = new CaptionEngine();
+let nodeCheckInterval, captionsObserver, stopper;
 
 const onPathChange = function (current, previous) {
   debug("onPathChange", "current path:", current);
+
+  // clear previous interval
+  if (nodeCheckInterval) {
+    console.log("nodecheck cleared!");
+    clearInterval(nodeCheckInterval);
+    nodeCheckInterval = null;
+  }
+
+  // disconnect captions observer if still connected
+  if (captionsObserver) {
+    captionsObserver.disconnect();
+    captionsObserver = null;
+  }
+
+  // check for window container
   if (isWatch(current)) {
     console.log("watch!");
-
-    caption.activate(current);
+    nodeCheckInterval = waitForNode({
+      document,
+      id: YOUTUBE_CAPTION_CONTAINER_ID,
+      callback: (element) => {
+        console.log("found!", element);
+        [captionsObserver, stopper] = colorfulCaptions();
+      },
+    });
   } else {
     console.log("not watch...");
-    caption.deactivate();
   }
 };
-console.log(">", this);
 
 interceptRequests({
   timedText: {
@@ -114,10 +110,3 @@ interceptRequests({
 haltInterception();
 
 const pathCheckInterval = pathChecker(window, onPathChange, 500, true);
-
-waitForNode({
-  document,
-  id: "ytp-caption-window-container",
-}).then((q) => {
-  console.log("found!", q);
-});

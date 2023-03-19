@@ -42,7 +42,7 @@ export function pathChecker(
   }, checkInterval);
 }
 
-export function waitForNode({
+export function waitForNodePromise({
   document,
   className,
   id,
@@ -52,7 +52,7 @@ export function waitForNode({
   return new Promise((resolve, reject) => {
     let startTime = new Date().getTime();
     debug(
-      "waitForNode",
+      "waitForNodePromise",
       `waiting for ${id ? "#" : ""}${id ?? ""}${id && className ? " or " : ""}${
         className ? "." : ""
       }${className ?? ""}`
@@ -62,17 +62,49 @@ export function waitForNode({
         (id && document.getElementById(id)) ||
         (className && document.getElementsByClassName(className));
       if (queriedNode) {
-        debug("waitForNode", id || className, "(done)", queriedNode);
+        debug("waitForNodePromise", id || className, "(done)", queriedNode);
         clearInterval(checker);
         resolve(queriedNode);
       }
       if (timeout && new Date().getTime() - startTime > timeout) {
-        error("waitForNode", id || className, "(timeout)");
+        error("waitForNodePromise", id || className, "(timeout)");
         clearInterval(checker);
         reject();
       }
     }, checkInterval);
   });
+}
+
+export function waitForNode({
+  document,
+  className,
+  id,
+  checkInterval = 100,
+  timeout = null,
+  callback,
+}) {
+  let startTime = new Date().getTime();
+  debug(
+    "waitForNode",
+    `waiting for ${id ? "#" : ""}${id ?? ""}${id && className ? " or " : ""}${
+      className ? "." : ""
+    }${className ?? ""}`
+  );
+  const checker = setInterval(() => {
+    const queriedNode =
+      (id && document.getElementById(id)) ||
+      (className && document.getElementsByClassName(className));
+    if (queriedNode) {
+      debug("waitForNode", id || className, "(done)", queriedNode);
+      clearInterval(checker);
+      callback(queriedNode);
+    }
+    if (timeout && new Date().getTime() - startTime > timeout) {
+      error("waitForNode", id || className, "(timeout)");
+      clearInterval(checker);
+    }
+  }, checkInterval);
+  return checker;
 }
 
 export function injectScript(src) {
