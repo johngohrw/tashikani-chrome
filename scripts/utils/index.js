@@ -62,7 +62,7 @@ export function waitForNodePromise({
         (id && document.getElementById(id)) ||
         (className && document.getElementsByClassName(className));
       if (queriedNode) {
-        debug("waitForNodePromise", id || className, "(done)", queriedNode);
+        debug("waitForNodePromise", id || className, "(done)");
         clearInterval(checker);
         resolve(queriedNode);
       }
@@ -95,7 +95,7 @@ export function waitForNode({
       (id && document.getElementById(id)) ||
       (className && document.getElementsByClassName(className));
     if (queriedNode) {
-      debug("waitForNode", id || className, "(done)", queriedNode);
+      debug("waitForNode", id || className, "(done)");
       clearInterval(checker);
       callback(queriedNode);
     }

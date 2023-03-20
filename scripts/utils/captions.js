@@ -99,6 +99,7 @@ export function highlightableCaptions() {
       background: var(--panel-bg-color);
       border: 1px solid var(--panel-border-color);
       mix-blend-mode: exclusion;
+      filter: brightness(2);
       border-radius: 4px;    
       z-index: 10;
       position: absolute;
@@ -139,7 +140,9 @@ export function highlightableCaptions() {
 
   return hijackCaptions((captionEl) => {
     //TODO: very naive word splitting implementation here
-    const captionWords = captionEl.innerText.split(" ");
+    const captionWords = captionEl.innerText
+      .split(" ")
+      .filter((word) => word !== "");
     captionEl.innerText = "";
     captionWords.forEach((word, _index) => {
       const el = template.cloneNode(true);
