@@ -40,6 +40,8 @@ interceptRequests({
   },
 });
 
+
+// path change listener
 let nodeCheckInterval, captionsObserver;
 const onPathChange = function (current, previous) {
   // debug("onPathChange", "current path:", current);

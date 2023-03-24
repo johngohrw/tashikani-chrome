@@ -53,8 +53,7 @@ export function waitForNodePromise({
     let startTime = new Date().getTime();
     debug(
       "waitForNodePromise",
-      `waiting for ${id ? "#" : ""}${id ?? ""}${id && className ? " or " : ""}${
-        className ? "." : ""
+      `waiting for ${id ? "#" : ""}${id ?? ""}${id && className ? " or " : ""}${className ? "." : ""
       }${className ?? ""}`
     );
     const checker = setInterval(() => {
@@ -86,8 +85,7 @@ export function waitForNode({
   let startTime = new Date().getTime();
   debug(
     "waitForNode",
-    `waiting for ${id ? "#" : ""}${id ?? ""}${id && className ? " or " : ""}${
-      className ? "." : ""
+    `waiting for ${id ? "#" : ""}${id ?? ""}${id && className ? " or " : ""}${className ? "." : ""
     }${className ?? ""}`
   );
   const checker = setInterval(() => {
@@ -133,4 +131,9 @@ export function injectScript(src) {
       }
     }, 50);
   });
+}
+
+
+export function getByClass(className) {
+  return document.getElementsByClassName(className)[0];
 }

@@ -3,7 +3,7 @@ import {
   YOUTUBE_CAPTION_SEGMENT_CLASS,
   YOUTUBE_CAPTION_TOP,
 } from "../globals.js";
-import { debug } from "./index.js";
+import { debug, getByClass } from "./index.js";
 
 export function hijackCaptions(callback) {
   const observerConfig = {
@@ -60,12 +60,73 @@ export function colorfulCaptions() {
   });
 }
 
-export function highlightableCaptions() {
-  debug("highlightableCaptions", "start hijacking");
+// panel & style elements creation
+function createPanel() {
+  const styles = document.createElement("style");
+  styles.innerHTML = `
+      :root {
+        --panel-bg-color: rgba(0, 0, 0, 0);
+        --panel-border-color: rgba(255, 255, 255, 0);
+      }
+      .hijacked-captions__panel {
+        width: 100%;
+        height: 100%;
+        background: var(--panel-bg-color);
+        border: 1px solid var(--panel-border-color);
+        mix-blend-mode: exclusion;
+        filter: brightness(2);
+        border-radius: 4px;    
+        z-index: 10;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+  
+        padding: 1.5rem 1.5rem;
+      }
+      .hijacked-captions__panel-title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        filter: hue-rotate(180deg);
+      }
+      .hijacked-captions__panel-description {
+        font-size: 1.5rem;
+      }
+    `;
+  const panel = document.createElement("div");
+  panel.classList.add("hijacked-captions__panel");
+  const titleEl = document.createElement("div");
+  titleEl.classList.add("hijacked-captions__panel-title");
+  panel.appendChild(titleEl);
+  const descriptionEl = document.createElement("div");
+  descriptionEl.classList.add("hijacked-captions__panel-description");
+  panel.appendChild(descriptionEl);
+  return [panel, styles]
+}
 
-  function getByClass(className) {
-    return document.getElementsByClassName(className)[0];
+function createCaptions() {
+  // template element for caption word segment.
+  const captionEl = document.createElement("span");
+  captionEl.classList.add("hijacked-captions__word");
+
+  const styles = document.createElement("style");
+  styles.innerHTML = `
+  :root {
+    --hover-bg-color: white;
   }
+  .hijacked-captions__word {
+    transition-duration: 200ms;
+  }
+  .hijacked-captions__word:hover {
+    color: #7ed0ff;
+  }
+`;
+
+  return [captionEl, styles]
+}
+
+export function highlightableCaptions({ }) {
+  debug("highlightableCaptions", "start hijacking");
 
   function wordHover(event) {
     console.log(event.target.innerText);
@@ -76,67 +137,14 @@ export function highlightableCaptions() {
     ).innerText = `description for ${event.target.innerText}`;
   }
 
-  const styles = document.createElement("style");
-  styles.innerHTML = `
-    :root {
-      --hover-bg-color: white;
-      --panel-bg-color: rgba(0, 0, 0, 0);
-      --panel-border-color: rgba(255, 255, 255, 0);
-    }
-    .hijacked-captions__word {
-      transition-duration: 200ms;
-    }
-    .hijacked-captions__word:hover {
-      color: #7ed0ff;
-    }
-    #ytp-caption-window-container,
-    #ytp-caption-window-container * {
-      box-sizing: border-box;
-    }
-    .hijacked-captions__panel {
-      width: 100%;
-      height: 100%;
-      background: var(--panel-bg-color);
-      border: 1px solid var(--panel-border-color);
-      mix-blend-mode: exclusion;
-      filter: brightness(2);
-      border-radius: 4px;    
-      z-index: 10;
-      position: absolute;
-      top: 0px;
-      left: 0px;
+  // hooking up captions to DOM
+  const [captionTemplate, captionStyles] = createCaptions()
+  document.body.appendChild(captionStyles);
 
-      padding: 1.5rem 1.5rem;
-    }
-    .hijacked-captions__panel-title {
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      filter: hue-rotate(180deg);
-    }
-    .hijacked-captions__panel-description {
-      font-size: 1.5rem;
-    }
-  `;
-
-  document.body.appendChild(styles);
-
-  // template element for caption word segment.
-  const template = document.createElement("span");
-  template.classList.add("hijacked-captions__word");
-
-  // panel elements creation
-  const panel = document.createElement("div");
-  panel.classList.add("hijacked-captions__panel");
-  const titleEl = document.createElement("div");
-  titleEl.classList.add("hijacked-captions__panel-title");
-  panel.appendChild(titleEl);
-  const descriptionEl = document.createElement("div");
-  descriptionEl.classList.add("hijacked-captions__panel-description");
-  panel.appendChild(descriptionEl);
-
-  // append panel to video caption overlay
+  // hooking up panel to DOM
+  const [panel, panelStyles] = createPanel()
   document.getElementById(YOUTUBE_CAPTION_CONTAINER_ID).appendChild(panel);
+  document.body.appendChild(panelStyles);
 
   return hijackCaptions((captionEl) => {
     //TODO: very naive word splitting implementation here
@@ -145,7 +153,7 @@ export function highlightableCaptions() {
       .filter((word) => word !== "");
     captionEl.innerText = "";
     captionWords.forEach((word, _index) => {
-      const el = template.cloneNode(true);
+      const el = captionTemplate.cloneNode(true);
       el.innerText = `${word}${_index < captionWords.length && " "}`;
       el.onmouseover = wordHover;
       captionEl.appendChild(el);
