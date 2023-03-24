@@ -11,3 +11,9 @@ export const TASHIKANI_MENU_ITEM_ID = "tashikani-injected-menu-item"
 
 
 export const TASHIKANI_MENU_ITEM_LABEL = "Tashikani Settings"
+export const TASHIKANI_ICON_STRING = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="20"
+        letter-spacing="0em">
+        <tspan x="2" y="19.2727">&#x78ba; </tspan>
+    </text>
+  </svg>`

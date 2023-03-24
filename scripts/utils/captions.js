@@ -1,4 +1,5 @@
 import {
+  TASHIKANI_ICON_STRING,
   TASHIKANI_MENU_ITEM_ID,
   TASHIKANI_MENU_ITEM_LABEL,
   YOUTUBE_CAPTION_CONTAINER_ID,
@@ -73,6 +74,10 @@ function createPanel() {
         --panel-bg-color: rgba(0, 0, 0, 0);
         --panel-border-color: rgba(255, 255, 255, 0);
       }
+      #${YOUTUBE_CAPTION_CONTAINER_ID},
+      #${YOUTUBE_CAPTION_CONTAINER_ID} * {
+        box-sizing: border-box;
+      }
       .hijacked-captions__panel {
         width: 100%;
         height: 100%;
@@ -130,6 +135,114 @@ function createCaptions() {
   return [captionEl, styles]
 }
 
+// panel & style elements creation
+function createSettingsPanel() {
+  const styles = document.createElement("style");
+  styles.innerHTML = `
+      :root {
+        --settings-panel-bg-color: rgba(0, 0, 0, 0.7);
+        --settings-panel-border-color: rgba(255, 255, 255, 0);
+      }
+      #tashikani-settings__container {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+        overflow-y: auto;
+
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        width: 400px;
+        height: calc(100% - 64px - 1rem);
+        padding: 1.5rem 1.5rem;
+
+        background: var(--settings-panel-bg-color);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--settings-panel-border-color);
+        border-radius: 12px;
+        font-size: 1.5rem;
+
+        pointer-events: all;
+        z-index: 50;
+
+        transform: translateX(0%);
+        transition-duration: 500ms;
+      }
+      #tashikani-settings__container.paneHidden {
+        transform: translateX(calc(100% + 1rem));
+      }
+    `;
+  const panel = document.createElement("div");
+  panel.id = "tashikani-settings__container"
+  panel.classList.add("paneHidden")
+  panel.paneHidden = true
+
+  populateSettings(panel, {
+    title: {
+      tag: "h4",
+      innerHTML: `Tashikani Settings`,
+      style: `
+        font-size: 2.5rem;
+      `
+    },
+    description: {
+      tag: "p",
+      innerHTML: `settings for Tashikani`,
+      style: `
+        padding: 0 0 1rem;
+      `
+    },
+    field1: {
+      tag: "p",
+      innerHTML: `sample field 1`
+    },
+    field2: {
+      tag: "p",
+      innerHTML: `sample field 2`
+    },
+    field3: {
+      tag: "p",
+      innerHTML: `sample field 3`
+    },
+    field4: {
+      tag: "p",
+      innerHTML: `sample field 4`
+    },
+    field5: {
+      tag: "p",
+      innerHTML: `sample field 5`
+    },
+    field6: {
+      tag: "p",
+      innerHTML: `sample field 6`
+    },
+    field7: {
+      tag: "p",
+      innerHTML: `sample field 7`
+    },
+    field8: {
+      tag: "p",
+      innerHTML: `sample field 8`
+    },
+    field9: {
+      tag: "p",
+      innerHTML: `sample field 9`
+    },
+  })
+
+  return [panel, styles]
+}
+
+function populateSettings(containerEl, fields) {
+  Object.entries(fields).forEach(([key, { tag, innerHTML, style }]) => {
+    const fieldEl = document.createElement(tag)
+    fieldEl.innerHTML = innerHTML
+    fieldEl.style = style
+    containerEl.appendChild(fieldEl);
+  })
+}
+
 export function highlightableCaptions() {
   debug("highlightableCaptions", "start hijacking");
 
@@ -151,6 +264,13 @@ export function highlightableCaptions() {
   document.getElementById(YOUTUBE_CAPTION_CONTAINER_ID).appendChild(panel);
   document.body.appendChild(panelStyles);
 
+
+
+  // hooking up settings panel to DOM
+  const [settingsPanel, settingsPanelStyles] = createSettingsPanel()
+  document.getElementById(YOUTUBE_CAPTION_CONTAINER_ID).appendChild(settingsPanel);
+  document.body.appendChild(settingsPanelStyles);
+
   // inject menu item (only if it doesnt exist yet)
   if (!document.getElementById(TASHIKANI_MENU_ITEM_ID)) {
     menuItemInjection()
@@ -171,44 +291,21 @@ export function highlightableCaptions() {
   });
 }
 
-// export function hijackCaptions(callback) {
-//   const observerConfig = {
-//     childList: true,
-//     subtree: true,
-
-//   };
-
-//   const targetNode = document.getElementById(YOUTUBE_CAPTION_CONTAINER_ID);
-//   const observer = new MutationObserver((mutationList, observer) => {
-//     mutationList.forEach((mutation) => {
-//       const classList = Array.from(mutation.target.classList);
-//       if (
-//         classList.includes(YOUTUBE_CAPTION_SEGMENT_CLASS) &&
-//         !Array.from(mutation.target.offsetParent?.classList || []).includes(
-//           YOUTUBE_CAPTION_TOP
-//         )
-//       ) {
-//         // Disconnect it temporarily while we make changes to the observed element.
-//         // An infinite loop will occur otherwise.
-//         observer.disconnect();
-//         // Process mutations
-//         callback(mutation.target);
-//         // Re-observe the element.
-//         observer.observe(targetNode, observerConfig);
-//       }
-//     });
-//   });
-
-//   observer.observe(targetNode, observerConfig);
-//   return observer;
-// }
 
 function handleShowSettings(e) {
   console.log("show settings > ", e)
+  const settingsPane = document.getElementById("tashikani-settings__container")
+  if (settingsPane.paneHidden) {
+    settingsPane.classList.remove("paneHidden")
+    settingsPane.paneHidden = false
+  } else {
+    settingsPane.classList.add("paneHidden")
+    settingsPane.paneHidden = true
+  }
 }
 
 function menuItemInjection() {
-  nodeCheckInterval = waitForNode({
+  const nodeCheckInterval = waitForNode({
     document,
     className: YOUTUBE_PLAYER_PANEL_MENU_CLASS,
     callback: (elements) => {
@@ -220,6 +317,7 @@ function menuItemInjection() {
     },
     checkInterval: 250
   });
+  return nodeCheckInterval
 }
 
 function injectMenuItem(targetNode) {
@@ -238,7 +336,7 @@ function injectMenuItem(targetNode) {
 
         // clone from existing menu item
         const newMenuItem = mutation.target.childNodes[0].cloneNode(true)
-        const newMenuHeight = mutation.target.clientHeight + mutation.target.childNodes[0].clientHeight
+        // const newMenuHeight = mutation.target.clientHeight + mutation.target.childNodes[0].clientHeight
 
         // remove unnecessary attributes
         newMenuItem.removeAttribute("role")
@@ -248,7 +346,7 @@ function injectMenuItem(targetNode) {
         newMenuItem.id = TASHIKANI_MENU_ITEM_ID
 
         // alter cloned menu item node
-        newMenuItem.childNodes[0].innerHTML = tashikaniIconString
+        newMenuItem.childNodes[0].innerHTML = TASHIKANI_ICON_STRING
         newMenuItem.childNodes[1].innerText = TASHIKANI_MENU_ITEM_LABEL
         newMenuItem.childNodes[1].setAttribute("style", "white-space: nowrap")
         newMenuItem.childNodes[2].innerHTML = ""
@@ -272,9 +370,3 @@ function injectMenuItem(targetNode) {
   observer.observe(targetNode, observerConfig);
 }
 
-const tashikaniIconString = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="20"
-        letter-spacing="0em">
-        <tspan x="2" y="19.2727">&#x78ba; </tspan>
-    </text>
-  </svg>`
